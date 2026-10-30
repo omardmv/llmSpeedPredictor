@@ -16,6 +16,9 @@ struct InferenceLabApp: App {
             ContentView()
                 .environment(monitor)
                 .onAppear { monitor.start(); Snapshot.scheduleIfNeeded() }
+                .onReceive(NotificationCenter.default.publisher(for: NSApplication.willTerminateNotification)) { _ in
+                    monitor.stop()
+                }
                 .frame(minWidth: 1000, minHeight: 680)
         }
         .defaultSize(width: 1280, height: Snapshot.screen == nil ? 860 : 1100)

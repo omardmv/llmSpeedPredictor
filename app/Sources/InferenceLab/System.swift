@@ -122,6 +122,7 @@ final class Monitor {
         let gpuUtil: Int
         let gpuMemory: Double
         let memory: System.Memory
+        let heat: HeatReading?   // nil without macmon
     }
 
     let machine = System.machine()
@@ -135,17 +136,26 @@ final class Monitor {
     private var tick = 0
     private let keep = 240  // 2 minutes at 2 samples per second
 
+    var latestHeat: HeatReading?
+    let heatAvailable = HeatReader.path != nil
+    private let heatReader = HeatReader()
+
     func start() {
         guard timer == nil else { return }
+        heatReader.onReading = { [weak self] r in Task { @MainActor in self?.latestHeat = r } }
+        heatReader.start()
         sample()
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
             Task { @MainActor in self?.sample() }
         }
     }
 
+    func stop() { heatReader.stop() }
+
     private func sample() {
         let gpu = System.gpu()
-        samples.append(Sample(time: .now, gpuUtil: gpu.utilization, gpuMemory: gpu.memoryInUse, memory: System.memory()))
+        samples.append(Sample(time: .now, gpuUtil: gpu.utilization, gpuMemory: gpu.memoryInUse, memory: System.memory(),
+                              heat: latestHeat))
         if samples.count > keep { samples.removeFirst(samples.count - keep) }
         tick += 1
         if tick % 2 == 1 { Task { await refreshOllama() } }

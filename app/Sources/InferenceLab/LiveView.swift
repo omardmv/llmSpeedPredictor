@@ -9,9 +9,16 @@ struct LiveView: View {
             VStack(alignment: .leading, spacing: 14) {
                 machineRow
                 nowRow
+                heatRow
                 HStack(alignment: .top, spacing: 14) {
                     gpuChart
                     memoryChart
+                }
+                if monitor.heatAvailable {
+                    HStack(alignment: .top, spacing: 14) {
+                        clockChart
+                        tempChart
+                    }
                 }
                 modelsCard
             }
@@ -46,6 +53,65 @@ struct LiveView: View {
                      detail: Fmt.bytes(monitor.loaded.reduce(0) { $0 + $1.size }) + " total")
         }
         .fixedSize(horizontal: false, vertical: true)
+    }
+
+    @ViewBuilder private var heatRow: some View {
+        if let h = monitor.latestHeat {
+            let top = HeatReader.maxGPUMHz
+            HStack(spacing: 12) {
+                StatTile(title: "GPU temperature", value: String(format: "%.0f °C", h.gpuTemp),
+                         detail: String(format: "CPU %.0f °C · fans %@", h.cpuTemp, h.fanRPM > 0 ? "\(Int(h.fanRPM)) rpm" : "off"),
+                         color: Palette.aqua)
+                StatTile(title: "GPU clock", value: String(format: "%.0f MHz", h.gpuMHz),
+                         detail: top.map { String(format: "%.0f%% of the %.0f MHz maximum", h.gpuMHz / $0 * 100, $0) },
+                         color: Palette.yellow)
+                StatTile(title: "GPU power", value: String(format: "%.1f W", h.gpuPower),
+                         detail: String(format: "whole chip %.1f W", h.chipPower))
+            }
+            .fixedSize(horizontal: false, vertical: true)
+        } else if !monitor.heatAvailable {
+            Text("Install macmon to see GPU temperature, clock and power: brew install macmon")
+                .font(.callout).foregroundStyle(.secondary)
+        }
+    }
+
+    private var heatSamples: [Monitor.Sample] { monitor.samples.filter { $0.heat != nil } }
+
+    private var clockChart: some View {
+        Card(title: "GPU clock", subtitle: "a hot chip lowers its clock, and tokens/s drops with it") {
+            Chart {
+                ForEach(heatSamples) { s in
+                    LineMark(x: .value("time", s.time), y: .value("MHz", s.heat!.gpuMHz))
+                        .foregroundStyle(Palette.yellow)
+                        .lineStyle(StrokeStyle(lineWidth: 2))
+                }
+                if let top = HeatReader.maxGPUMHz {
+                    RuleMark(y: .value("max", top))
+                        .foregroundStyle(.secondary)
+                        .lineStyle(StrokeStyle(lineWidth: 1, dash: [4, 3]))
+                        .annotation(position: .top, alignment: .leading) {
+                            Text("max \(Int(top)) MHz").font(.caption2).foregroundStyle(.secondary)
+                        }
+                }
+            }
+            .chartYScale(domain: 0...((HeatReader.maxGPUMHz ?? 1600) * 1.12))
+            .chartXAxis { AxisMarks(values: .stride(by: .second, count: 30)) { _ in AxisGridLine() } }
+            .frame(height: 180)
+        }
+    }
+
+    private var tempChart: some View {
+        Card(title: "GPU temperature", subtitle: "°C · rises under load, falls slowly afterwards") {
+            let temps = heatSamples.map { $0.heat!.gpuTemp }
+            Chart(heatSamples) { s in
+                LineMark(x: .value("time", s.time), y: .value("°C", s.heat!.gpuTemp))
+                    .foregroundStyle(Palette.aqua)
+                    .lineStyle(StrokeStyle(lineWidth: 2))
+            }
+            .chartYScale(domain: ((temps.min() ?? 30) - 5)...((temps.max() ?? 60) + 5))
+            .chartXAxis { AxisMarks(values: .stride(by: .second, count: 30)) { _ in AxisGridLine() } }
+            .frame(height: 180)
+        }
     }
 
     private var gpuChart: some View {

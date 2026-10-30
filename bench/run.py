@@ -10,7 +10,7 @@ from pathlib import Path
 
 import numpy as np
 
-from . import hw, ollama
+from . import backend, hw, ollama
 
 DOLLY = Path(__file__).parent.parent / "data" / "prompts" / "databricks-dolly-15k.jsonl"
 SPARK = " ▁▂▃▄▅▆▇█"
@@ -31,10 +31,12 @@ def padding(n):
 
 def measure(model, prompt, max_tokens, cold=False):
     if cold:
+        if backend.NAME == "llama":
+            raise SystemExit("--cold needs Ollama: llama-server keeps its model loaded. Restart the server instead.")
         ollama.unload(model)
     messages = [{"role": "user", "content": prompt}]
     with hw.GpuSampler() as gpu:
-        r = ollama.chat(model, messages, max_tokens=max_tokens)
+        r = backend.chat(model, messages, max_tokens=max_tokens)
     t = np.array(r["t_tokens"])
     gaps = np.diff(t) if len(t) > 1 else np.array([0.0])
     s = lambda key: r.get(key, 0) / 1e9
@@ -97,6 +99,7 @@ def report(m):
 
 
 def main(model, prompt, pad, max_tokens, cold, repeat, as_json=False):
+    backend.prepare(model)
     if pad:
         prompt = padding(pad) + "\n\n" + prompt
     if as_json:
@@ -106,7 +109,7 @@ def main(model, prompt, pad, max_tokens, cold, repeat, as_json=False):
             m["prompt_chars"] = len(prompt)
             print(json.dumps(m, default=float), flush=True)
         return
-    print(f"{ollama.resolve(model)}  |  prompt {len(prompt)} chars  |  max_tokens {max_tokens}  |  "
+    print(f"{backend.label(model)}  |  prompt {len(prompt)} chars  |  max_tokens {max_tokens}  |  "
           f"{'cold start' if cold else 'model may already be loaded'}\n")
     rows = []
     for i in range(repeat):

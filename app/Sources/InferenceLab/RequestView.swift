@@ -47,6 +47,8 @@ struct RequestView: View {
     @Local private var selected: UUID?
     @Local private var task: Task<Void, Never>?
     @Local private var error: String?
+    @AppStorage(ServerChoice.backendKey) private var backend = "ollama"
+    @AppStorage(ServerChoice.urlKey) private var url = "http://localhost:8080"
 
     private var current: RunResult? { runs.first { $0.id == selected } ?? runs.last }
 
@@ -76,28 +78,34 @@ struct RequestView: View {
 
     private var controls: some View {
         Card(title: "Request") {
+            ServerPicker()
             HStack(spacing: 12) {
                 ModelPicker(model: $model)
-                Toggle("Cold start (unload first)", isOn: $cold)
+                Toggle("Cold start (unload first)", isOn: $cold).fixedSize()
+                    .disabled(backend == "llama")
+                    .help(backend == "llama" ? "llama-server keeps its model loaded; restart it for a cold start" : "")
                 Stepper("Send it \(repeatCount)×", value: $repeatCount, in: 1...6)
+                    .fixedSize()
                     .help("Same request several times in a row: watch load and prefill disappear")
-                Spacer()
+                Spacer(minLength: 0)
                 if task != nil {
                     ProgressView().controlSize(.small)
-                    Button("Stop") { task?.cancel() }
+                    Button("Stop") { task?.cancel() }.fixedSize()
                 } else {
-                    Button("Send") { send() }.buttonStyle(.borderedProminent).keyboardShortcut(.return, modifiers: .command)
+                    Button("Send") { send() }.buttonStyle(.borderedProminent).keyboardShortcut(.return, modifiers: .command).fixedSize()
                 }
             }
             TextField("Prompt", text: $prompt, axis: .vertical).lineLimit(1...4).textFieldStyle(.roundedBorder)
             HStack(spacing: 18) {
                 Stepper("Add \(pad) paragraphs before it", value: $pad, in: 0...20)
+                    .fixedSize()
                     .help("Real paragraphs from the Dolly dataset: a longer prompt means a longer prefill")
                 HStack {
-                    Text("max_tokens")
-                    Slider(value: $maxTokens, in: 16...1024).frame(width: 220)
-                    Text("\(Int(maxTokens))").monospacedDigit().frame(width: 40, alignment: .trailing)
+                    Text("Answer limit (max_tokens)").fixedSize()
+                    Slider(value: Binding(get: { maxTokens }, set: { maxTokens = ($0 / 10).rounded() * 10 }), in: 10...1020).frame(minWidth: 120, maxWidth: 240)
+                    Text("\(Int(maxTokens)) tokens").monospacedDigit().fixedSize()
                 }
+                Spacer(minLength: 0)
             }
         }
     }
@@ -107,7 +115,8 @@ struct RequestView: View {
         runs = []
         var args = ["run", model, "--prompt", prompt, "--pad", "\(pad)", "--max-tokens", "\(Int(maxTokens))",
                     "--repeat", "\(repeatCount)"]
-        if cold { args.append("--cold") }
+        if cold && backend != "llama" { args.append("--cold") }
+        args += ServerChoice.args(backend: backend, url: url)
         task = Task {
             do {
                 for try await line in Bench.lines(args) {

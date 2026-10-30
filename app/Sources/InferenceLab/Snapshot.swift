@@ -8,6 +8,7 @@ import SwiftUI
 /// opens that screen, presses its main button, saves the window to
 /// /tmp/inferencelab-<screen>.png and quits. Draws the window itself, so it needs no
 /// Screen Recording permission.
+/// Add INFERENCE_LAB_SNAPSHOT_RUN=1 with `load` to start a tiny real load test first.
 enum Snapshot {
     static let screen: Screen? = {
         guard let name = ProcessInfo.processInfo.environment["INFERENCE_LAB_SNAPSHOT"] else { return nil }
@@ -24,6 +25,12 @@ enum Snapshot {
     @MainActor
     static func scheduleIfNeeded() {
         guard let screen else { return }
+        // INFERENCE_LAB_SNAPSHOT_WIDTH=1000 checks the layout at the narrowest window.
+        if let w = Double(ProcessInfo.processInfo.environment["INFERENCE_LAB_SNAPSHOT_WIDTH"] ?? "") {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                NSApp.windows.first { $0.frame.width > 600 }?.setContentSize(NSSize(width: w, height: 1100))
+            }
+        }
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             guard let window = NSApp.windows.first(where: { $0.isVisible && $0.contentView != nil && $0.frame.width > 600 }),
                   let view = window.contentView,

@@ -1,1 +1,16 @@
+# Python
 /.venv
+__pycache__/
+*.pyc
+
+# Swift app builds
+app/.build/
+app/build/
+
+# macOS / editors
+.DS_Store
+.vscode/
+.idea/
+
+# Local secrets, if you ever add any
+.env
