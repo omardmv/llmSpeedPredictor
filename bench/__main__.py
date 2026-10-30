@@ -1,0 +1,82 @@
+"""Look inside your local LLM server.
+
+    python -m bench hw                     # what the machine is, what it is doing now
+    python -m bench hw --watch             # live GPU / memory view (keep it open in a 2nd terminal)
+    python -m bench model quality          # architecture, memory, KV cache size
+    python -m bench tokens "some text"     # how text is cut into tokens
+    python -m bench tokens --compare       # tokens per character across languages and code
+    python -m bench run quality            # one request, split into load / prefill / decode
+    python -m bench run quality --cold     # same, starting from an unloaded model
+    python -m bench sweep quality          # 1, 2, 4, 8, 16 users at once
+
+`fast` = qwen2.5:0.5b and `quality` = qwen2.5:1.5b; any Ollama model name also works.
+"""
+
+import argparse
+
+
+def main():
+    p = argparse.ArgumentParser(prog="python -m bench", description=__doc__,
+                                formatter_class=argparse.RawDescriptionHelpFormatter)
+    sub = p.add_subparsers(dest="cmd", required=True)
+
+    s = sub.add_parser("hw", help="machine + live GPU / memory")
+    s.add_argument("--watch", action="store_true")
+
+    s = sub.add_parser("model", help="model architecture and memory")
+    s.add_argument("model", nargs="?", default="quality")
+    s.add_argument("--ctx", type=int, default=4096, help="context size to load with")
+    s.add_argument("--no-load", action="store_true", help="only read the file, don't load it")
+    s.add_argument("--json", action="store_true", help="machine-readable output (used by the GUI app)")
+
+    s = sub.add_parser("tokens", help="see how text becomes tokens")
+    s.add_argument("text", nargs="?")
+    s.add_argument("--model", default="quality")
+    s.add_argument("--compare", action="store_true", help="compare languages / code / numbers")
+    s.add_argument("--chat", action="store_true", help="show what the chat template adds around your text")
+
+    s = sub.add_parser("run", help="time one request, phase by phase")
+    s.add_argument("model", nargs="?", default="quality")
+    s.add_argument("--prompt", default="Explain how a car engine works.")
+    s.add_argument("--pad", type=int, default=0, help="prepend N paragraphs to make the prompt longer")
+    s.add_argument("--max-tokens", type=int, default=256)
+    s.add_argument("--cold", action="store_true", help="unload the model first")
+    s.add_argument("--repeat", type=int, default=1, help="send the same request N times in a row")
+    s.add_argument("--json", action="store_true", help="machine-readable output (used by the GUI app)")
+
+    s = sub.add_parser("sweep", help="many users at once")
+    s.add_argument("model", nargs="?", default="quality")
+    s.add_argument("--users", default="1,2,4,8,16", help="concurrency levels")
+    s.add_argument("--requests", type=int, default=3, help="requests per user at each level")
+    s.add_argument("--max-tokens", type=int, default=200)
+    s.add_argument("--json", action="store_true", help="machine-readable output (used by the GUI app)")
+
+    a = p.parse_args()
+
+    if a.cmd == "hw":
+        from . import hw
+        if a.watch:
+            hw.watch()
+        else:
+            hw.print_machine()
+            print()
+            hw.print_now()
+    elif a.cmd == "model":
+        from . import modelinfo
+        if a.json:
+            modelinfo.dump(a.model, num_ctx=a.ctx, load=not a.no_load)
+        else:
+            modelinfo.print_info(a.model, num_ctx=a.ctx, load=not a.no_load)
+    elif a.cmd == "tokens":
+        from . import tokens
+        tokens.main(a.model, a.text, compare=a.compare, chat=a.chat)
+    elif a.cmd == "run":
+        from . import run
+        run.main(a.model, a.prompt, a.pad, a.max_tokens, a.cold, a.repeat, as_json=a.json)
+    elif a.cmd == "sweep":
+        from . import sweep
+        sweep.main(a.model, [int(u) for u in a.users.split(",")], a.requests, a.max_tokens, as_json=a.json)
+
+
+if __name__ == "__main__":
+    main()

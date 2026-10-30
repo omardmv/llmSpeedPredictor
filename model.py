@@ -6,7 +6,7 @@ w = 0.2
 b= 0.1 
 lr= 0.1
 batch_size = 32
-epochs = 500
+epochs = 400  #walk far enough 
 
 w_start, b_start = w, b          # remember the starting guess, to draw it later
 loss_history, w_history, b_history = [], [], []
