@@ -32,6 +32,7 @@ enum Screen: String, CaseIterable, Identifiable {
     case tokens = "Tokens"
     case request = "One request"
     case load = "Load test"
+    case history = "History"
 
     var id: String { rawValue }
     var icon: String {
@@ -41,6 +42,7 @@ enum Screen: String, CaseIterable, Identifiable {
         case .tokens: "textformat.abc"
         case .request: "stopwatch"
         case .load: "person.3.fill"
+        case .history: "clock.arrow.circlepath"
         }
     }
     var blurb: String {
@@ -50,6 +52,7 @@ enum Screen: String, CaseIterable, Identifiable {
         case .tokens: "How text is cut into tokens"
         case .request: "Load, prefill and decode of a single request"
         case .load: "Many users at once: latency vs throughput"
+        case .history: "Every saved load test, side by side"
         }
     }
 }
@@ -72,6 +75,7 @@ struct ContentView: View {
                 TokensView(active: screen == .tokens).shown(screen == .tokens)
                 RequestView().shown(screen == .request)
                 LoadTestView().shown(screen == .load)
+                HistoryView(active: screen == .history).shown(screen == .history)
             }
             .navigationTitle(screen.rawValue)
             .navigationSubtitle(screen.blurb)

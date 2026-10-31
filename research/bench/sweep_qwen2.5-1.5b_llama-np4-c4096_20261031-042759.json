@@ -1,0 +1,6584 @@
+{
+  "server": {
+    "backend": "llama-server",
+    "url": "http://localhost:8080",
+    "model_path": "/Users/omarmdv/.ollama/models/blobs/sha256-183715c435899236895da3869489cc30ac241476b4971a20285b1a462818a5b4",
+    "slots": 4,
+    "ctx_per_slot": 4096,
+    "build": "b11669-620d2225c"
+  },
+  "settings": {
+    "model": "qwen2.5:1.5b",
+    "users": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "requests_per_user": 3,
+    "max_tokens": 400,
+    "temperature": 0.7,
+    "repeat": 2,
+    "forced": true
+  },
+  "environment": {
+    "machine": {
+      "chip": "Apple M4 Pro",
+      "macos": "27.0.1",
+      "cpu_performance_cores": 8,
+      "cpu_efficiency_cores": 4,
+      "gpu_cores": 16,
+      "unified_memory_bytes": 25769803776,
+      "bandwidth_gbs": 273,
+      "gpu_wired_limit_mb": 0
+    },
+    "python": "3.15.0",
+    "ollama_version": "0.40.12",
+    "model": "qwen2.5:1.5b",
+    "quantization": "Q4_K_M",
+    "gguf": "sha256-183715c435899236895da3869489cc30ac241476b4971a20285b1a462818a5b4",
+    "ollama_env": {}
+  },
+  "before": {
+    "time": "2026-10-31T04:28:05",
+    "gpu_busy_avg": 33.40909090909091,
+    "gpu_busy_peak": 34,
+    "cpu_busy_machine": 5.641666666666667,
+    "top_processes": [
+      {
+        "name": "WindowServer",
+        "cpu": 36.2
+      },
+      {
+        "name": "WallpaperMacintoshExtension",
+        "cpu": 21.7
+      },
+      {
+        "name": "Helium Helper (Renderer)",
+        "cpu": 1.5
+      },
+      {
+        "name": "Code Helper (Plugin)",
+        "cpu": 1.3
+      },
+      {
+        "name": "Code Helper (Renderer)",
+        "cpu": 0.8
+      }
+    ],
+    "gpu_heavy_apps": [],
+    "on_ac_power": true,
+    "power_mode": "automatic",
+    "throttling": false,
+    "thermal_detail": [],
+    "memory_free_pct": 55,
+    "gpu_temp": 69.47045135498047,
+    "cpu_temp": 44.61848831176758,
+    "fan_rpm": 5308,
+    "swap_used_gb": 4.80096435546875,
+    "ollama_loaded": [],
+    "llama_servers": 1,
+    "problems": [
+      "GPU already busy: avg 33%, peak 34% (want avg <= 5%)",
+      "WindowServer is using 36% CPU",
+      "WallpaperMacintoshExtension is using 22% CPU"
+    ],
+    "quiet": false
+  },
+  "after": {
+    "time": "2026-10-31T04:33:18",
+    "on_ac_power": true,
+    "power_mode": "automatic",
+    "throttling": false,
+    "thermal_detail": []
+  },
+  "levels": [
+    {
+      "users": 1,
+      "requests": 6,
+      "ttft_p50_s": 0.03165391698712483,
+      "ttft_p95_s": 0.03613269186462276,
+      "tpot_p50_ms": 6.858829790435266,
+      "per_user_tok_s": 146.6163899895696,
+      "total_tok_s": 144.24850611084452,
+      "gpu_util_avg": 95.69565217391305,
+      "gpu_temp_avg": 88.56360953893417,
+      "gpu_temp_max": 89.89651107788086,
+      "gpu_mhz_avg": 1577.7596153846152,
+      "gpu_mhz_min_busy": 1577.0,
+      "gpu_clock_pct": 99.9847665009262,
+      "gpu_power_w": 18.476367137370964,
+      "chip_power_w": 19.796636856519257,
+      "chip_energy_j": 123.6538033359274,
+      "fan_rpm_max": 5388.5,
+      "tokens_per_joule": 7.286833308243438
+    },
+    {
+      "users": 2,
+      "requests": 12,
+      "ttft_p50_s": 0.048368979259976186,
+      "ttft_p95_s": 0.05244865085114725,
+      "tpot_p50_ms": 10.834944365898561,
+      "per_user_tok_s": 92.52599887003122,
+      "total_tok_s": 166.1262229208941,
+      "gpu_util_avg": 94.61551790527531,
+      "gpu_temp_avg": 89.89835955022457,
+      "gpu_temp_max": 91.29741668701172,
+      "gpu_mhz_avg": 1577.8887362637363,
+      "gpu_mhz_min_busy": 1577.0,
+      "gpu_clock_pct": 99.99294906614298,
+      "gpu_power_w": 20.26650305370708,
+      "chip_power_w": 21.52018958395654,
+      "chip_energy_j": 297.06448719761846,
+      "fan_rpm_max": 5387.5,
+      "tokens_per_joule": 7.719890457802617
+    },
+    {
+      "users": 4,
+      "requests": 24,
+      "ttft_p50_s": 0.05706655199173838,
+      "ttft_p95_s": 0.08544790406303945,
+      "tpot_p50_ms": 11.979347391032267,
+      "per_user_tok_s": 83.71569981879823,
+      "total_tok_s": 270.9724943536438,
+      "gpu_util_avg": 93.95652173913044,
+      "gpu_temp_avg": 90.26376579284668,
+      "gpu_temp_max": 91.1170539855957,
+      "gpu_mhz_avg": 1577.6666666666665,
+      "gpu_mhz_min_busy": 1576.5,
+      "gpu_clock_pct": 99.97887621461766,
+      "gpu_power_w": 20.500112450917563,
+      "chip_power_w": 21.807450008392333,
+      "chip_energy_j": 303.8435178177956,
+      "fan_rpm_max": 5387.0,
+      "tokens_per_joule": 12.427243451315384
+    },
+    {
+      "users": 8,
+      "requests": 48,
+      "ttft_p50_s": 4.402789166735602,
+      "ttft_p95_s": 4.876892661639431,
+      "tpot_p50_ms": 11.9076487311745,
+      "per_user_tok_s": 84.19174951992768,
+      "total_tok_s": 318.8928440782592,
+      "gpu_util_avg": 93.9328231292517,
+      "gpu_temp_avg": 91.18483572164452,
+      "gpu_temp_max": 91.61688232421875,
+      "gpu_mhz_avg": 1577.670060331825,
+      "gpu_mhz_min_busy": 1576.5,
+      "gpu_clock_pct": 99.97909127578106,
+      "gpu_power_w": 20.902776637947575,
+      "chip_power_w": 22.624824780324644,
+      "chip_energy_j": 594.9012929574021,
+      "fan_rpm_max": 5388.0,
+      "tokens_per_joule": 14.108235272124425
+    },
+    {
+      "users": 16,
+      "requests": 96,
+      "ttft_p50_s": 13.097211832995526,
+      "ttft_p95_s": 14.49124503669591,
+      "tpot_p50_ms": 11.95572386721889,
+      "per_user_tok_s": 83.85401447503122,
+      "total_tok_s": 324.24687337251464,
+      "gpu_util_avg": 93.95972035627207,
+      "gpu_temp_avg": 91.55404234898832,
+      "gpu_temp_max": 91.91278076171875,
+      "gpu_mhz_avg": 1577.6262229210342,
+      "gpu_mhz_min_busy": 1576.0,
+      "gpu_clock_pct": 99.97631323960927,
+      "gpu_power_w": 20.889620781611264,
+      "chip_power_w": 22.286106061968745,
+      "chip_energy_j": 1217.8170993313295,
+      "fan_rpm_max": 5388.0,
+      "tokens_per_joule": 14.550057714101747
+    }
+  ],
+  "rounds": {
+    "1": [
+      {
+        "users": 1,
+        "requests": 3,
+        "ttft_p50_s": 0.031703291984740645,
+        "ttft_p95_s": 0.03428929173387587,
+        "tpot_p50_ms": 6.882550000445917,
+        "per_user_tok_s": 146.30712581167327,
+        "total_tok_s": 144.12604678709224,
+        "gpu_util_avg": 95.69565217391305,
+        "round": 1,
+        "gpu_temp_avg": 88.364808400472,
+        "gpu_temp_max": 88.51779174804688,
+        "gpu_mhz_avg": 1577.75,
+        "gpu_mhz_min_busy": 1577,
+        "gpu_clock_pct": 99.98415716096325,
+        "gpu_power_w": 18.475160439809162,
+        "chip_power_w": 19.919192790985107,
+        "chip_energy_j": 124.52428346411088,
+        "fan_rpm_max": 5389,
+        "tokens_per_joule": 7.235536514929452
+      },
+      {
+        "users": 1,
+        "requests": 3,
+        "ttft_p50_s": 0.031604541989509016,
+        "ttft_p95_s": 0.037976091995369644,
+        "tpot_p50_ms": 6.835109580424614,
+        "per_user_tok_s": 146.92565416746595,
+        "total_tok_s": 144.37096543459677,
+        "gpu_util_avg": 95.69565217391305,
+        "round": 2,
+        "gpu_temp_avg": 88.76241067739633,
+        "gpu_temp_max": 91.27523040771484,
+        "gpu_mhz_avg": 1577.7692307692307,
+        "gpu_mhz_min_busy": 1577,
+        "gpu_clock_pct": 99.98537584088915,
+        "gpu_power_w": 18.477573834932766,
+        "chip_power_w": 19.67408092205341,
+        "chip_energy_j": 122.78332320774393,
+        "fan_rpm_max": 5388,
+        "tokens_per_joule": 7.338130101557424
+      }
+    ],
+    "2": [
+      {
+        "users": 2,
+        "requests": 6,
+        "ttft_p50_s": 0.04992714602849446,
+        "ttft_p95_s": 0.05685603122401517,
+        "tpot_p50_ms": 10.81225375938381,
+        "per_user_tok_s": 92.71945407261009,
+        "total_tok_s": 164.3651805937333,
+        "gpu_util_avg": 94.16981132075472,
+        "round": 1,
+        "gpu_temp_avg": 89.26310457502093,
+        "gpu_temp_max": 90.93453979492188,
+        "gpu_mhz_avg": 1577.892857142857,
+        "gpu_mhz_min_busy": 1577,
+        "gpu_clock_pct": 99.99321021184139,
+        "gpu_power_w": 19.93598903928484,
+        "chip_power_w": 21.223613602774485,
+        "chip_energy_j": 304.99267027644805,
+        "fan_rpm_max": 5388,
+        "tokens_per_joule": 7.74444840874065
+      },
+      {
+        "users": 2,
+        "requests": 6,
+        "ttft_p50_s": 0.04681081249145791,
+        "ttft_p95_s": 0.04804127047827933,
+        "tpot_p50_ms": 10.857634972413315,
+        "per_user_tok_s": 92.33254366745234,
+        "total_tok_s": 167.8872652480549,
+        "gpu_util_avg": 95.06122448979592,
+        "round": 2,
+        "gpu_temp_avg": 90.53361452542819,
+        "gpu_temp_max": 91.66029357910156,
+        "gpu_mhz_avg": 1577.8846153846155,
+        "gpu_mhz_min_busy": 1577,
+        "gpu_clock_pct": 99.99268792044458,
+        "gpu_power_w": 20.59701706812932,
+        "chip_power_w": 21.816765565138596,
+        "chip_energy_j": 289.13630411878887,
+        "fan_rpm_max": 5387,
+        "tokens_per_joule": 7.695332506864583
+      }
+    ],
+    "4": [
+      {
+        "users": 4,
+        "requests": 12,
+        "ttft_p50_s": 0.05591993749840185,
+        "ttft_p95_s": 0.08737201857438777,
+        "tpot_p50_ms": 11.929821556500205,
+        "per_user_tok_s": 84.08871926980481,
+        "total_tok_s": 291.2173831597799,
+        "gpu_util_avg": 93.91304347826087,
+        "round": 1,
+        "gpu_temp_avg": 89.96025634765626,
+        "gpu_temp_max": 90.7562026977539,
+        "gpu_mhz_avg": 1577.6,
+        "gpu_mhz_min_busy": 1577,
+        "gpu_clock_pct": 99.97465145754119,
+        "gpu_power_w": 20.51107002258301,
+        "chip_power_w": 21.771618270874022,
+        "chip_energy_j": 270.7085301826953,
+        "fan_rpm_max": 5387,
+        "tokens_per_joule": 13.37600997484736
+      },
+      {
+        "users": 4,
+        "requests": 12,
+        "ttft_p50_s": 0.05821316648507491,
+        "ttft_p95_s": 0.08352378955169115,
+        "tpot_p50_ms": 12.028873225564329,
+        "per_user_tok_s": 83.34268036779164,
+        "total_tok_s": 250.72760554750778,
+        "gpu_util_avg": 94.0,
+        "round": 2,
+        "gpu_temp_avg": 90.56727523803711,
+        "gpu_temp_max": 91.4779052734375,
+        "gpu_mhz_avg": 1577.7333333333333,
+        "gpu_mhz_min_busy": 1576,
+        "gpu_clock_pct": 99.98310097169413,
+        "gpu_power_w": 20.489154879252116,
+        "chip_power_w": 21.843281745910645,
+        "chip_energy_j": 336.97850545289583,
+        "fan_rpm_max": 5387,
+        "tokens_per_joule": 11.478476927783408
+      }
+    ],
+    "8": [
+      {
+        "users": 8,
+        "requests": 24,
+        "ttft_p50_s": 4.325018958479632,
+        "ttft_p95_s": 4.851553954472183,
+        "tpot_p50_ms": 11.857499739252624,
+        "per_user_tok_s": 84.54644850591775,
+        "total_tok_s": 318.64510752120856,
+        "gpu_util_avg": 93.91666666666667,
+        "round": 1,
+        "gpu_temp_avg": 90.57205140356923,
+        "gpu_temp_max": 91.0728988647461,
+        "gpu_mhz_avg": 1577.686274509804,
+        "gpu_mhz_min_busy": 1576,
+        "gpu_clock_pct": 99.98011879022839,
+        "gpu_power_w": 20.59324384203144,
+        "chip_power_w": 21.918334923538506,
+        "chip_energy_j": 570.4426248214295,
+        "fan_rpm_max": 5390,
+        "tokens_per_joule": 14.537833673624982
+      },
+      {
+        "users": 8,
+        "requests": 24,
+        "ttft_p50_s": 4.4805593749915715,
+        "ttft_p95_s": 4.902231368806679,
+        "tpot_p50_ms": 11.957797723096379,
+        "per_user_tok_s": 83.83705053393761,
+        "total_tok_s": 319.14058063530985,
+        "gpu_util_avg": 93.94897959183673,
+        "round": 2,
+        "gpu_temp_avg": 91.7976200397198,
+        "gpu_temp_max": 92.1608657836914,
+        "gpu_mhz_avg": 1577.6538461538462,
+        "gpu_mhz_min_busy": 1577,
+        "gpu_clock_pct": 99.97806376133373,
+        "gpu_power_w": 21.212309433863712,
+        "chip_power_w": 23.331314637110783,
+        "chip_energy_j": 619.3599610933749,
+        "fan_rpm_max": 5386,
+        "tokens_per_joule": 13.678636870623865
+      }
+    ],
+    "16": [
+      {
+        "users": 16,
+        "requests": 48,
+        "ttft_p50_s": 13.29885493699112,
+        "ttft_p95_s": 14.41754011932062,
+        "tpot_p50_ms": 11.89568713413876,
+        "per_user_tok_s": 84.27477330464527,
+        "total_tok_s": 326.077749806821,
+        "gpu_util_avg": 93.99014778325123,
+        "round": 1,
+        "gpu_temp_avg": 91.13435738175004,
+        "gpu_temp_max": 91.48001098632812,
+        "gpu_mhz_avg": 1577.6203703703704,
+        "gpu_mhz_min_busy": 1576,
+        "gpu_clock_pct": 99.97594235553679,
+        "gpu_power_w": 20.853299070287633,
+        "chip_power_w": 22.174697204872412,
+        "chip_energy_j": 1225.5059370525828,
+        "fan_rpm_max": 5388,
+        "tokens_per_joule": 14.704947120322904
+      },
+      {
+        "users": 16,
+        "requests": 48,
+        "ttft_p50_s": 12.895568728999933,
+        "ttft_p95_s": 14.5649499540712,
+        "tpot_p50_ms": 12.015760600299021,
+        "per_user_tok_s": 83.43325564541718,
+        "total_tok_s": 322.41599693820837,
+        "gpu_util_avg": 93.92929292929293,
+        "round": 2,
+        "gpu_temp_avg": 91.9737273162266,
+        "gpu_temp_max": 92.34555053710938,
+        "gpu_mhz_avg": 1577.632075471698,
+        "gpu_mhz_min_busy": 1576,
+        "gpu_clock_pct": 99.97668412368175,
+        "gpu_power_w": 20.925942492934894,
+        "chip_power_w": 22.39751491906508,
+        "chip_energy_j": 1210.1282616100762,
+        "fan_rpm_max": 5388,
+        "tokens_per_joule": 14.39516830788059
+      }
+    ]
+  },
+  "warmup": {
+    "seconds": 82.24316591699608,
+    "reason": "temperature stable (86.3\u00b0C, +-0.9\u00b0C in 60s)"
+  },
+  "max_gpu_mhz": 1578,
+  "heat": [
+    {
+      "t": -81.62,
+      "gpu_temp": 76.45,
+      "cpu_temp": 45.11,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.85,
+      "gpu_power": 20.26,
+      "chip_power": 22.21,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -81.11,
+      "gpu_temp": 76.45,
+      "cpu_temp": 45.11,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.58,
+      "chip_power": 22.73,
+      "fan_rpm": 5345
+    },
+    {
+      "t": -80.6,
+      "gpu_temp": 82.62,
+      "cpu_temp": 61.44,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.24,
+      "chip_power": 22.22,
+      "fan_rpm": 5387
+    },
+    {
+      "t": -80.1,
+      "gpu_temp": 82.62,
+      "cpu_temp": 61.44,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.52,
+      "chip_power": 22.27,
+      "fan_rpm": 5366
+    },
+    {
+      "t": -79.59,
+      "gpu_temp": 79.51,
+      "cpu_temp": 61.82,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.36,
+      "chip_power": 22.02,
+      "fan_rpm": 5346
+    },
+    {
+      "t": -79.07,
+      "gpu_temp": 79.51,
+      "cpu_temp": 61.82,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.28,
+      "chip_power": 21.78,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -78.56,
+      "gpu_temp": 84.07,
+      "cpu_temp": 63.0,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.4,
+      "chip_power": 21.3,
+      "fan_rpm": 5387
+    },
+    {
+      "t": -78.05,
+      "gpu_temp": 84.07,
+      "cpu_temp": 63.0,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.14,
+      "chip_power": 21.48,
+      "fan_rpm": 5346
+    },
+    {
+      "t": -77.55,
+      "gpu_temp": 84.34,
+      "cpu_temp": 63.25,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.29,
+      "chip_power": 22.08,
+      "fan_rpm": 5347
+    },
+    {
+      "t": -77.03,
+      "gpu_temp": 84.34,
+      "cpu_temp": 63.25,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.53,
+      "gpu_power": 20.65,
+      "chip_power": 22.47,
+      "fan_rpm": 5347
+    },
+    {
+      "t": -76.53,
+      "gpu_temp": 84.78,
+      "cpu_temp": 62.58,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.37,
+      "chip_power": 22.18,
+      "fan_rpm": 5347
+    },
+    {
+      "t": -76.02,
+      "gpu_temp": 84.78,
+      "cpu_temp": 62.58,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.29,
+      "chip_power": 22.11,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -75.5,
+      "gpu_temp": 85.1,
+      "cpu_temp": 62.65,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.3,
+      "chip_power": 22.04,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -74.99,
+      "gpu_temp": 85.1,
+      "cpu_temp": 62.65,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.93,
+      "gpu_power": 20.86,
+      "chip_power": 22.7,
+      "fan_rpm": 5370
+    },
+    {
+      "t": -74.48,
+      "gpu_temp": 85.34,
+      "cpu_temp": 62.92,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.37,
+      "chip_power": 22.07,
+      "fan_rpm": 5329
+    },
+    {
+      "t": -73.97,
+      "gpu_temp": 85.34,
+      "cpu_temp": 62.92,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.61,
+      "chip_power": 22.37,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -73.45,
+      "gpu_temp": 81.38,
+      "cpu_temp": 63.98,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.19,
+      "chip_power": 21.46,
+      "fan_rpm": 5368
+    },
+    {
+      "t": -72.94,
+      "gpu_temp": 81.38,
+      "cpu_temp": 63.98,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.54,
+      "chip_power": 21.53,
+      "fan_rpm": 5370
+    },
+    {
+      "t": -72.43,
+      "gpu_temp": 85.76,
+      "cpu_temp": 62.94,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.64,
+      "gpu_power": 20.13,
+      "chip_power": 21.07,
+      "fan_rpm": 5311
+    },
+    {
+      "t": -71.92,
+      "gpu_temp": 85.76,
+      "cpu_temp": 62.94,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.21,
+      "chip_power": 21.09,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -71.41,
+      "gpu_temp": 85.72,
+      "cpu_temp": 63.0,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.59,
+      "chip_power": 21.5,
+      "fan_rpm": 5329
+    },
+    {
+      "t": -70.91,
+      "gpu_temp": 85.72,
+      "cpu_temp": 63.0,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.02,
+      "chip_power": 20.9,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -70.4,
+      "gpu_temp": 86.09,
+      "cpu_temp": 64.03,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.42,
+      "chip_power": 21.33,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -69.88,
+      "gpu_temp": 86.09,
+      "cpu_temp": 64.03,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.85,
+      "gpu_power": 20.81,
+      "chip_power": 21.78,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -69.37,
+      "gpu_temp": 86.3,
+      "cpu_temp": 64.22,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.47,
+      "chip_power": 21.37,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -68.87,
+      "gpu_temp": 86.3,
+      "cpu_temp": 64.22,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.12,
+      "chip_power": 21.08,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -68.36,
+      "gpu_temp": 86.41,
+      "cpu_temp": 63.28,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.42,
+      "chip_power": 21.41,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -67.86,
+      "gpu_temp": 86.41,
+      "cpu_temp": 63.28,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.46,
+      "chip_power": 21.39,
+      "fan_rpm": 5310
+    },
+    {
+      "t": -67.34,
+      "gpu_temp": 86.53,
+      "cpu_temp": 64.47,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.89,
+      "gpu_power": 20.66,
+      "chip_power": 21.62,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -66.83,
+      "gpu_temp": 86.53,
+      "cpu_temp": 64.47,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.03,
+      "chip_power": 20.89,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -66.32,
+      "gpu_temp": 86.67,
+      "cpu_temp": 64.19,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.94,
+      "chip_power": 21.91,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -65.81,
+      "gpu_temp": 86.67,
+      "cpu_temp": 64.19,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.17,
+      "chip_power": 21.08,
+      "fan_rpm": 5389
+    },
+    {
+      "t": -65.3,
+      "gpu_temp": 86.92,
+      "cpu_temp": 63.45,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.86,
+      "gpu_power": 20.8,
+      "chip_power": 21.74,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -64.8,
+      "gpu_temp": 86.92,
+      "cpu_temp": 63.45,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.68,
+      "chip_power": 21.56,
+      "fan_rpm": 5328
+    },
+    {
+      "t": -64.28,
+      "gpu_temp": 87.05,
+      "cpu_temp": 63.65,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.35,
+      "chip_power": 21.66,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -63.77,
+      "gpu_temp": 87.05,
+      "cpu_temp": 63.65,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.74,
+      "chip_power": 21.81,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -63.26,
+      "gpu_temp": 87.13,
+      "cpu_temp": 63.84,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.91,
+      "gpu_power": 20.64,
+      "chip_power": 21.54,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -62.76,
+      "gpu_temp": 87.13,
+      "cpu_temp": 63.84,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.9,
+      "gpu_power": 20.18,
+      "chip_power": 21.2,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -62.25,
+      "gpu_temp": 87.13,
+      "cpu_temp": 63.8,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.22,
+      "chip_power": 21.13,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -61.74,
+      "gpu_temp": 87.13,
+      "cpu_temp": 63.8,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.68,
+      "chip_power": 21.6,
+      "fan_rpm": 5347
+    },
+    {
+      "t": -61.23,
+      "gpu_temp": 87.34,
+      "cpu_temp": 63.77,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.72,
+      "chip_power": 21.6,
+      "fan_rpm": 5330
+    },
+    {
+      "t": -60.74,
+      "gpu_temp": 87.34,
+      "cpu_temp": 63.77,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.93,
+      "chip_power": 21.84,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -60.22,
+      "gpu_temp": 87.48,
+      "cpu_temp": 64.97,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.78,
+      "gpu_power": 20.89,
+      "chip_power": 21.9,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -59.73,
+      "gpu_temp": 87.48,
+      "cpu_temp": 64.97,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.97,
+      "chip_power": 22.06,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -59.21,
+      "gpu_temp": 87.68,
+      "cpu_temp": 64.64,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.36,
+      "chip_power": 22.16,
+      "fan_rpm": 5369
+    },
+    {
+      "t": -58.72,
+      "gpu_temp": 87.68,
+      "cpu_temp": 65.25,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.09,
+      "chip_power": 22.12,
+      "fan_rpm": 5351
+    },
+    {
+      "t": -58.19,
+      "gpu_temp": 87.8,
+      "cpu_temp": 64.59,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.84,
+      "gpu_power": 20.42,
+      "chip_power": 21.45,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -57.69,
+      "gpu_temp": 87.68,
+      "cpu_temp": 64.17,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.36,
+      "chip_power": 21.35,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -57.19,
+      "gpu_temp": 87.68,
+      "cpu_temp": 64.17,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.86,
+      "chip_power": 22.14,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -56.67,
+      "gpu_temp": 87.97,
+      "cpu_temp": 64.65,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.16,
+      "chip_power": 23.38,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -56.16,
+      "gpu_temp": 87.97,
+      "cpu_temp": 64.65,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.54,
+      "chip_power": 22.25,
+      "fan_rpm": 5310
+    },
+    {
+      "t": -55.64,
+      "gpu_temp": 88.17,
+      "cpu_temp": 64.46,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.1,
+      "chip_power": 22.8,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -55.13,
+      "gpu_temp": 88.17,
+      "cpu_temp": 64.46,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.87,
+      "gpu_power": 19.92,
+      "chip_power": 20.85,
+      "fan_rpm": 5368
+    },
+    {
+      "t": -54.62,
+      "gpu_temp": 87.94,
+      "cpu_temp": 64.51,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.46,
+      "chip_power": 21.36,
+      "fan_rpm": 5309
+    },
+    {
+      "t": -54.12,
+      "gpu_temp": 87.94,
+      "cpu_temp": 64.51,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.78,
+      "chip_power": 21.69,
+      "fan_rpm": 5312
+    },
+    {
+      "t": -53.61,
+      "gpu_temp": 88.19,
+      "cpu_temp": 65.47,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.47,
+      "chip_power": 21.49,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -53.1,
+      "gpu_temp": 88.19,
+      "cpu_temp": 65.47,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.81,
+      "gpu_power": 20.32,
+      "chip_power": 21.34,
+      "fan_rpm": 5389
+    },
+    {
+      "t": -52.59,
+      "gpu_temp": 88.17,
+      "cpu_temp": 64.46,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.57,
+      "chip_power": 21.48,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -52.09,
+      "gpu_temp": 88.17,
+      "cpu_temp": 64.46,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.75,
+      "chip_power": 21.72,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -51.57,
+      "gpu_temp": 88.29,
+      "cpu_temp": 64.36,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.47,
+      "chip_power": 21.37,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -51.07,
+      "gpu_temp": 88.29,
+      "cpu_temp": 64.36,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.66,
+      "chip_power": 21.56,
+      "fan_rpm": 5370
+    },
+    {
+      "t": -50.55,
+      "gpu_temp": 88.38,
+      "cpu_temp": 64.38,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.82,
+      "gpu_power": 20.26,
+      "chip_power": 21.2,
+      "fan_rpm": 5351
+    },
+    {
+      "t": -50.05,
+      "gpu_temp": 88.38,
+      "cpu_temp": 64.38,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.57,
+      "chip_power": 21.5,
+      "fan_rpm": 5310
+    },
+    {
+      "t": -49.54,
+      "gpu_temp": 88.34,
+      "cpu_temp": 67.63,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.83,
+      "chip_power": 21.77,
+      "fan_rpm": 5331
+    },
+    {
+      "t": -49.03,
+      "gpu_temp": 88.34,
+      "cpu_temp": 67.63,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.48,
+      "chip_power": 21.41,
+      "fan_rpm": 5370
+    },
+    {
+      "t": -48.52,
+      "gpu_temp": 88.44,
+      "cpu_temp": 64.57,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.78,
+      "gpu_power": 20.56,
+      "chip_power": 21.51,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -48.01,
+      "gpu_temp": 88.44,
+      "cpu_temp": 64.57,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.83,
+      "gpu_power": 20.38,
+      "chip_power": 21.5,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -47.49,
+      "gpu_temp": 88.49,
+      "cpu_temp": 65.0,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.94,
+      "chip_power": 21.9,
+      "fan_rpm": 5369
+    },
+    {
+      "t": -46.99,
+      "gpu_temp": 88.49,
+      "cpu_temp": 65.0,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.77,
+      "chip_power": 21.67,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -46.48,
+      "gpu_temp": 88.59,
+      "cpu_temp": 64.53,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.86,
+      "gpu_power": 20.41,
+      "chip_power": 21.37,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -45.97,
+      "gpu_temp": 88.59,
+      "cpu_temp": 64.53,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.92,
+      "gpu_power": 20.64,
+      "chip_power": 21.68,
+      "fan_rpm": 5331
+    },
+    {
+      "t": -45.46,
+      "gpu_temp": 88.62,
+      "cpu_temp": 48.15,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.42,
+      "chip_power": 21.49,
+      "fan_rpm": 5331
+    },
+    {
+      "t": -44.96,
+      "gpu_temp": 88.62,
+      "cpu_temp": 48.15,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.84,
+      "chip_power": 21.88,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -44.45,
+      "gpu_temp": 88.85,
+      "cpu_temp": 64.58,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.58,
+      "chip_power": 21.46,
+      "fan_rpm": 5330
+    },
+    {
+      "t": -43.94,
+      "gpu_temp": 88.85,
+      "cpu_temp": 64.58,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.74,
+      "chip_power": 21.66,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -43.43,
+      "gpu_temp": 88.72,
+      "cpu_temp": 64.64,
+      "gpu_mhz": 1576,
+      "gpu_busy": 99.6,
+      "gpu_power": 20.09,
+      "chip_power": 21.06,
+      "fan_rpm": 5312
+    },
+    {
+      "t": -42.93,
+      "gpu_temp": 88.72,
+      "cpu_temp": 64.64,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.84,
+      "gpu_power": 20.35,
+      "chip_power": 21.24,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -42.42,
+      "gpu_temp": 88.55,
+      "cpu_temp": 64.69,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.84,
+      "chip_power": 21.74,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -41.91,
+      "gpu_temp": 88.55,
+      "cpu_temp": 64.69,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.63,
+      "chip_power": 21.55,
+      "fan_rpm": 5351
+    },
+    {
+      "t": -41.4,
+      "gpu_temp": 88.82,
+      "cpu_temp": 64.57,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.65,
+      "chip_power": 21.58,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -40.9,
+      "gpu_temp": 88.82,
+      "cpu_temp": 64.57,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.84,
+      "chip_power": 21.73,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -40.39,
+      "gpu_temp": 88.91,
+      "cpu_temp": 64.61,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.83,
+      "gpu_power": 20.52,
+      "chip_power": 21.42,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -39.88,
+      "gpu_temp": 88.91,
+      "cpu_temp": 64.61,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.77,
+      "chip_power": 25.4,
+      "fan_rpm": 5370
+    },
+    {
+      "t": -39.38,
+      "gpu_temp": 89.1,
+      "cpu_temp": 69.6,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.21,
+      "chip_power": 28.55,
+      "fan_rpm": 5369
+    },
+    {
+      "t": -38.87,
+      "gpu_temp": 89.1,
+      "cpu_temp": 69.6,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.9,
+      "gpu_power": 21.07,
+      "chip_power": 26.67,
+      "fan_rpm": 5330
+    },
+    {
+      "t": -38.36,
+      "gpu_temp": 89.78,
+      "cpu_temp": 81.91,
+      "gpu_mhz": 1576,
+      "gpu_busy": 99.68,
+      "gpu_power": 20.87,
+      "chip_power": 27.85,
+      "fan_rpm": 5369
+    },
+    {
+      "t": -37.85,
+      "gpu_temp": 89.78,
+      "cpu_temp": 81.91,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.84,
+      "chip_power": 24.04,
+      "fan_rpm": 5311
+    },
+    {
+      "t": -37.34,
+      "gpu_temp": 89.94,
+      "cpu_temp": 81.69,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.6,
+      "chip_power": 23.12,
+      "fan_rpm": 5312
+    },
+    {
+      "t": -36.82,
+      "gpu_temp": 89.94,
+      "cpu_temp": 81.69,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.34,
+      "chip_power": 24.63,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -36.32,
+      "gpu_temp": 89.96,
+      "cpu_temp": 80.75,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.96,
+      "chip_power": 25.25,
+      "fan_rpm": 5329
+    },
+    {
+      "t": -35.81,
+      "gpu_temp": 89.96,
+      "cpu_temp": 80.75,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.81,
+      "gpu_power": 20.71,
+      "chip_power": 25.21,
+      "fan_rpm": 5388
+    },
+    {
+      "t": -35.29,
+      "gpu_temp": 90.16,
+      "cpu_temp": 81.54,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 21.14,
+      "chip_power": 25.57,
+      "fan_rpm": 5312
+    },
+    {
+      "t": -34.79,
+      "gpu_temp": 90.16,
+      "cpu_temp": 81.54,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.09,
+      "chip_power": 26.67,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -34.28,
+      "gpu_temp": 90.43,
+      "cpu_temp": 82.01,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.4,
+      "chip_power": 28.21,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -33.76,
+      "gpu_temp": 90.43,
+      "cpu_temp": 82.01,
+      "gpu_mhz": 1576,
+      "gpu_busy": 99.69,
+      "gpu_power": 20.44,
+      "chip_power": 28.31,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -33.25,
+      "gpu_temp": 90.97,
+      "cpu_temp": 83.09,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.61,
+      "chip_power": 29.73,
+      "fan_rpm": 5311
+    },
+    {
+      "t": -32.74,
+      "gpu_temp": 90.97,
+      "cpu_temp": 83.09,
+      "gpu_mhz": 1577,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.0,
+      "chip_power": 28.95,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -32.22,
+      "gpu_temp": 91.1,
+      "cpu_temp": 71.81,
+      "gpu_mhz": 1573,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.51,
+      "chip_power": 28.32,
+      "fan_rpm": 5351
+    },
+    {
+      "t": -31.73,
+      "gpu_temp": 91.1,
+      "cpu_temp": 71.81,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.86,
+      "gpu_power": 20.82,
+      "chip_power": 22.36,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -31.21,
+      "gpu_temp": 91.07,
+      "cpu_temp": 68.53,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.87,
+      "chip_power": 21.77,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -30.71,
+      "gpu_temp": 90.67,
+      "cpu_temp": 67.91,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.92,
+      "gpu_power": 20.47,
+      "chip_power": 21.38,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -30.18,
+      "gpu_temp": 90.67,
+      "cpu_temp": 66.99,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.91,
+      "gpu_power": 20.47,
+      "chip_power": 21.48,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -29.68,
+      "gpu_temp": 90.57,
+      "cpu_temp": 65.8,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.69,
+      "chip_power": 21.59,
+      "fan_rpm": 5368
+    },
+    {
+      "t": -29.16,
+      "gpu_temp": 90.57,
+      "cpu_temp": 65.8,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.14,
+      "chip_power": 22.05,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -28.65,
+      "gpu_temp": 90.51,
+      "cpu_temp": 66.48,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.77,
+      "gpu_power": 20.32,
+      "chip_power": 21.26,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -28.15,
+      "gpu_temp": 90.51,
+      "cpu_temp": 66.48,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.03,
+      "chip_power": 22.08,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -27.64,
+      "gpu_temp": 90.59,
+      "cpu_temp": 65.67,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.82,
+      "chip_power": 21.78,
+      "fan_rpm": 5311
+    },
+    {
+      "t": -27.13,
+      "gpu_temp": 90.59,
+      "cpu_temp": 65.67,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.63,
+      "gpu_power": 20.09,
+      "chip_power": 21.03,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -26.62,
+      "gpu_temp": 90.47,
+      "cpu_temp": 65.72,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.99,
+      "chip_power": 22.07,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -26.12,
+      "gpu_temp": 90.47,
+      "cpu_temp": 65.72,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.97,
+      "chip_power": 22.06,
+      "fan_rpm": 5328
+    },
+    {
+      "t": -25.6,
+      "gpu_temp": 90.63,
+      "cpu_temp": 65.65,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.47,
+      "chip_power": 21.4,
+      "fan_rpm": 5347
+    },
+    {
+      "t": -25.09,
+      "gpu_temp": 90.63,
+      "cpu_temp": 65.65,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 21.14,
+      "chip_power": 22.13,
+      "fan_rpm": 5309
+    },
+    {
+      "t": -24.57,
+      "gpu_temp": 90.59,
+      "cpu_temp": 65.75,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.63,
+      "chip_power": 21.52,
+      "fan_rpm": 5347
+    },
+    {
+      "t": -24.06,
+      "gpu_temp": 90.59,
+      "cpu_temp": 65.75,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.68,
+      "chip_power": 21.65,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -23.56,
+      "gpu_temp": 90.47,
+      "cpu_temp": 65.7,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.92,
+      "gpu_power": 20.36,
+      "chip_power": 21.32,
+      "fan_rpm": 5347
+    },
+    {
+      "t": -23.05,
+      "gpu_temp": 90.47,
+      "cpu_temp": 65.7,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.86,
+      "chip_power": 21.76,
+      "fan_rpm": 5310
+    },
+    {
+      "t": -22.54,
+      "gpu_temp": 90.56,
+      "cpu_temp": 65.68,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.84,
+      "chip_power": 21.77,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -22.03,
+      "gpu_temp": 90.56,
+      "cpu_temp": 65.68,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.34,
+      "chip_power": 21.3,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -21.52,
+      "gpu_temp": 90.45,
+      "cpu_temp": 65.66,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.07,
+      "chip_power": 21.99,
+      "fan_rpm": 5388
+    },
+    {
+      "t": -21.01,
+      "gpu_temp": 90.45,
+      "cpu_temp": 65.66,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.45,
+      "chip_power": 21.38,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -20.5,
+      "gpu_temp": 90.57,
+      "cpu_temp": 65.59,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.64,
+      "chip_power": 21.57,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -19.99,
+      "gpu_temp": 90.57,
+      "cpu_temp": 65.59,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.87,
+      "chip_power": 21.86,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -19.49,
+      "gpu_temp": 90.49,
+      "cpu_temp": 65.78,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.0,
+      "chip_power": 21.96,
+      "fan_rpm": 5330
+    },
+    {
+      "t": -18.98,
+      "gpu_temp": 90.49,
+      "cpu_temp": 65.78,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.81,
+      "gpu_power": 20.6,
+      "chip_power": 21.54,
+      "fan_rpm": 5311
+    },
+    {
+      "t": -18.47,
+      "gpu_temp": 90.41,
+      "cpu_temp": 66.9,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.83,
+      "gpu_power": 20.87,
+      "chip_power": 21.82,
+      "fan_rpm": 5309
+    },
+    {
+      "t": -17.96,
+      "gpu_temp": 90.41,
+      "cpu_temp": 66.9,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.75,
+      "chip_power": 21.69,
+      "fan_rpm": 5389
+    },
+    {
+      "t": -17.46,
+      "gpu_temp": 90.47,
+      "cpu_temp": 65.66,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.49,
+      "chip_power": 21.4,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -16.95,
+      "gpu_temp": 90.47,
+      "cpu_temp": 65.66,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.68,
+      "chip_power": 21.59,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -16.43,
+      "gpu_temp": 90.49,
+      "cpu_temp": 65.56,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.06,
+      "chip_power": 21.97,
+      "fan_rpm": 5310
+    },
+    {
+      "t": -15.93,
+      "gpu_temp": 90.49,
+      "cpu_temp": 65.56,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.85,
+      "chip_power": 22.15,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -15.42,
+      "gpu_temp": 90.54,
+      "cpu_temp": 65.85,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.79,
+      "gpu_power": 20.79,
+      "chip_power": 22.75,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -14.91,
+      "gpu_temp": 90.54,
+      "cpu_temp": 65.85,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.33,
+      "chip_power": 22.09,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -14.4,
+      "gpu_temp": 90.61,
+      "cpu_temp": 65.95,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.53,
+      "chip_power": 21.82,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -13.88,
+      "gpu_temp": 90.61,
+      "cpu_temp": 65.95,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.09,
+      "chip_power": 22.04,
+      "fan_rpm": 5327
+    },
+    {
+      "t": -13.37,
+      "gpu_temp": 90.47,
+      "cpu_temp": 65.76,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.61,
+      "chip_power": 21.54,
+      "fan_rpm": 5310
+    },
+    {
+      "t": -12.87,
+      "gpu_temp": 90.47,
+      "cpu_temp": 65.76,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.92,
+      "gpu_power": 20.53,
+      "chip_power": 21.43,
+      "fan_rpm": 5329
+    },
+    {
+      "t": -12.36,
+      "gpu_temp": 90.48,
+      "cpu_temp": 65.66,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.76,
+      "chip_power": 21.68,
+      "fan_rpm": 5389
+    },
+    {
+      "t": -11.85,
+      "gpu_temp": 90.48,
+      "cpu_temp": 65.66,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.7,
+      "chip_power": 21.6,
+      "fan_rpm": 5369
+    },
+    {
+      "t": -11.34,
+      "gpu_temp": 90.53,
+      "cpu_temp": 65.59,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.69,
+      "chip_power": 21.62,
+      "fan_rpm": 5311
+    },
+    {
+      "t": -10.83,
+      "gpu_temp": 90.53,
+      "cpu_temp": 65.59,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.76,
+      "gpu_power": 20.76,
+      "chip_power": 21.7,
+      "fan_rpm": 5329
+    },
+    {
+      "t": -10.32,
+      "gpu_temp": 90.54,
+      "cpu_temp": 65.79,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.74,
+      "chip_power": 21.68,
+      "fan_rpm": 5350
+    },
+    {
+      "t": -9.81,
+      "gpu_temp": 90.54,
+      "cpu_temp": 65.79,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.88,
+      "gpu_power": 20.53,
+      "chip_power": 21.49,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -9.31,
+      "gpu_temp": 90.44,
+      "cpu_temp": 66.84,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.94,
+      "chip_power": 21.89,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -8.8,
+      "gpu_temp": 90.44,
+      "cpu_temp": 66.84,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.81,
+      "chip_power": 21.73,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -8.29,
+      "gpu_temp": 90.55,
+      "cpu_temp": 65.62,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.79,
+      "chip_power": 21.7,
+      "fan_rpm": 5348
+    },
+    {
+      "t": -7.78,
+      "gpu_temp": 90.55,
+      "cpu_temp": 65.62,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.79,
+      "gpu_power": 20.25,
+      "chip_power": 21.2,
+      "fan_rpm": 5369
+    },
+    {
+      "t": -7.27,
+      "gpu_temp": 90.44,
+      "cpu_temp": 65.71,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.8,
+      "chip_power": 21.73,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -6.76,
+      "gpu_temp": 90.44,
+      "cpu_temp": 65.71,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.2,
+      "chip_power": 22.14,
+      "fan_rpm": 5309
+    },
+    {
+      "t": -6.25,
+      "gpu_temp": 90.54,
+      "cpu_temp": 65.58,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.33,
+      "chip_power": 21.22,
+      "fan_rpm": 5387
+    },
+    {
+      "t": -5.74,
+      "gpu_temp": 90.54,
+      "cpu_temp": 65.58,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.68,
+      "chip_power": 21.58,
+      "fan_rpm": 5347
+    },
+    {
+      "t": -5.23,
+      "gpu_temp": 90.43,
+      "cpu_temp": 65.62,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.89,
+      "gpu_power": 20.1,
+      "chip_power": 21.05,
+      "fan_rpm": 5388
+    },
+    {
+      "t": -4.73,
+      "gpu_temp": 90.43,
+      "cpu_temp": 65.62,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.44,
+      "chip_power": 21.39,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -4.21,
+      "gpu_temp": 90.19,
+      "cpu_temp": 66.36,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.69,
+      "chip_power": 21.69,
+      "fan_rpm": 5309
+    },
+    {
+      "t": -3.71,
+      "gpu_temp": 91.18,
+      "cpu_temp": 66.2,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.76,
+      "chip_power": 21.7,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -3.19,
+      "gpu_temp": 90.5,
+      "cpu_temp": 65.59,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.86,
+      "chip_power": 21.85,
+      "fan_rpm": 5329
+    },
+    {
+      "t": -2.68,
+      "gpu_temp": 86.28,
+      "cpu_temp": 65.73,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.47,
+      "chip_power": 21.5,
+      "fan_rpm": 5368
+    },
+    {
+      "t": -2.17,
+      "gpu_temp": 86.28,
+      "cpu_temp": 65.73,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.77,
+      "chip_power": 21.68,
+      "fan_rpm": 5367
+    },
+    {
+      "t": -1.66,
+      "gpu_temp": 90.51,
+      "cpu_temp": 65.62,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.86,
+      "chip_power": 21.78,
+      "fan_rpm": 5328
+    },
+    {
+      "t": -1.16,
+      "gpu_temp": 90.51,
+      "cpu_temp": 65.62,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.11,
+      "chip_power": 21.91,
+      "fan_rpm": 5310
+    },
+    {
+      "t": -0.65,
+      "gpu_temp": 90.22,
+      "cpu_temp": 65.61,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.36,
+      "chip_power": 21.26,
+      "fan_rpm": 5349
+    },
+    {
+      "t": -0.14,
+      "gpu_temp": 90.22,
+      "cpu_temp": 65.61,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.52,
+      "chip_power": 19.81,
+      "fan_rpm": 5351
+    },
+    {
+      "t": 0.37,
+      "gpu_temp": 88.38,
+      "cpu_temp": 65.94,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.19,
+      "gpu_power": 17.81,
+      "chip_power": 19.01,
+      "fan_rpm": 5311
+    },
+    {
+      "t": 0.87,
+      "gpu_temp": 88.38,
+      "cpu_temp": 65.94,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.68,
+      "chip_power": 20.7,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 1.38,
+      "gpu_temp": 88.47,
+      "cpu_temp": 48.4,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.51,
+      "chip_power": 20.91,
+      "fan_rpm": 5389
+    },
+    {
+      "t": 1.89,
+      "gpu_temp": 88.47,
+      "cpu_temp": 48.4,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.6,
+      "chip_power": 20.86,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 2.4,
+      "gpu_temp": 88.52,
+      "cpu_temp": 66.06,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.73,
+      "chip_power": 20.1,
+      "fan_rpm": 5388
+    },
+    {
+      "t": 2.91,
+      "gpu_temp": 88.52,
+      "cpu_temp": 66.06,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 18.46,
+      "chip_power": 19.64,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 3.41,
+      "gpu_temp": 88.38,
+      "cpu_temp": 67.71,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.37,
+      "chip_power": 19.56,
+      "fan_rpm": 5328
+    },
+    {
+      "t": 3.92,
+      "gpu_temp": 88.38,
+      "cpu_temp": 67.71,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.73,
+      "gpu_power": 18.48,
+      "chip_power": 19.64,
+      "fan_rpm": 5309
+    },
+    {
+      "t": 4.43,
+      "gpu_temp": 88.24,
+      "cpu_temp": 65.77,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.49,
+      "chip_power": 19.56,
+      "fan_rpm": 5329
+    },
+    {
+      "t": 4.95,
+      "gpu_temp": 88.24,
+      "cpu_temp": 65.77,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.18,
+      "chip_power": 19.3,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 5.46,
+      "gpu_temp": 88.22,
+      "cpu_temp": 65.72,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.66,
+      "chip_power": 19.85,
+      "fan_rpm": 5327
+    },
+    {
+      "t": 5.97,
+      "gpu_temp": 88.22,
+      "cpu_temp": 65.72,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.74,
+      "chip_power": 19.92,
+      "fan_rpm": 5329
+    },
+    {
+      "t": 6.48,
+      "gpu_temp": 88.26,
+      "cpu_temp": 68.64,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.21,
+      "gpu_power": 19.29,
+      "chip_power": 20.48,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 6.99,
+      "gpu_temp": 88.26,
+      "cpu_temp": 68.64,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.34,
+      "chip_power": 22.37,
+      "fan_rpm": 5369
+    },
+    {
+      "t": 7.5,
+      "gpu_temp": 90.18,
+      "cpu_temp": 65.79,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.42,
+      "chip_power": 22.45,
+      "fan_rpm": 5328
+    },
+    {
+      "t": 8.01,
+      "gpu_temp": 90.18,
+      "cpu_temp": 65.79,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.3,
+      "chip_power": 22.33,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 8.51,
+      "gpu_temp": 90.61,
+      "cpu_temp": 65.87,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.68,
+      "chip_power": 22.74,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 9.02,
+      "gpu_temp": 90.61,
+      "cpu_temp": 65.87,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.4,
+      "chip_power": 22.28,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 9.53,
+      "gpu_temp": 90.81,
+      "cpu_temp": 65.9,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.76,
+      "chip_power": 22.98,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 10.04,
+      "gpu_temp": 90.81,
+      "cpu_temp": 65.9,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.94,
+      "chip_power": 23.02,
+      "fan_rpm": 5308
+    },
+    {
+      "t": 10.55,
+      "gpu_temp": 90.93,
+      "cpu_temp": 66.01,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.63,
+      "chip_power": 22.66,
+      "fan_rpm": 5388
+    },
+    {
+      "t": 11.05,
+      "gpu_temp": 90.93,
+      "cpu_temp": 66.01,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.78,
+      "gpu_power": 18.79,
+      "chip_power": 20.26,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 11.57,
+      "gpu_temp": 89.36,
+      "cpu_temp": 66.1,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 17.6,
+      "chip_power": 19.21,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 12.08,
+      "gpu_temp": 89.36,
+      "cpu_temp": 66.1,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.04,
+      "chip_power": 19.73,
+      "fan_rpm": 5310
+    },
+    {
+      "t": 12.59,
+      "gpu_temp": 87.96,
+      "cpu_temp": 65.94,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 17.68,
+      "chip_power": 19.17,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 13.1,
+      "gpu_temp": 87.96,
+      "cpu_temp": 65.94,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 17.82,
+      "chip_power": 19.51,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 13.61,
+      "gpu_temp": 87.88,
+      "cpu_temp": 65.91,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 17.82,
+      "chip_power": 19.45,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 14.12,
+      "gpu_temp": 87.88,
+      "cpu_temp": 65.91,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.13,
+      "chip_power": 19.82,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 14.63,
+      "gpu_temp": 87.8,
+      "cpu_temp": 65.84,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 17.59,
+      "chip_power": 19.25,
+      "fan_rpm": 5328
+    },
+    {
+      "t": 15.14,
+      "gpu_temp": 87.8,
+      "cpu_temp": 65.84,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 17.78,
+      "chip_power": 19.44,
+      "fan_rpm": 5328
+    },
+    {
+      "t": 15.64,
+      "gpu_temp": 87.67,
+      "cpu_temp": 65.79,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 17.89,
+      "chip_power": 19.54,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 16.15,
+      "gpu_temp": 87.67,
+      "cpu_temp": 65.79,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 17.49,
+      "chip_power": 19.06,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 16.67,
+      "gpu_temp": 87.61,
+      "cpu_temp": 65.87,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.71,
+      "gpu_power": 19.31,
+      "chip_power": 20.77,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 17.18,
+      "gpu_temp": 87.61,
+      "cpu_temp": 65.87,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.88,
+      "chip_power": 21.88,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 17.69,
+      "gpu_temp": 89.59,
+      "cpu_temp": 65.73,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.66,
+      "chip_power": 22.72,
+      "fan_rpm": 5388
+    },
+    {
+      "t": 18.2,
+      "gpu_temp": 89.59,
+      "cpu_temp": 65.73,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.21,
+      "chip_power": 22.29,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 18.71,
+      "gpu_temp": 90.43,
+      "cpu_temp": 65.76,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.7,
+      "chip_power": 22.77,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 19.22,
+      "gpu_temp": 90.43,
+      "cpu_temp": 65.76,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.72,
+      "chip_power": 22.78,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 19.72,
+      "gpu_temp": 90.6,
+      "cpu_temp": 67.47,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.39,
+      "chip_power": 22.29,
+      "fan_rpm": 5308
+    },
+    {
+      "t": 20.23,
+      "gpu_temp": 90.6,
+      "cpu_temp": 67.47,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.92,
+      "chip_power": 23.03,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 20.74,
+      "gpu_temp": 90.76,
+      "cpu_temp": 65.9,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.31,
+      "gpu_power": 19.96,
+      "chip_power": 21.26,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 21.26,
+      "gpu_temp": 90.76,
+      "cpu_temp": 65.9,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.36,
+      "chip_power": 22.58,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 21.76,
+      "gpu_temp": 89.98,
+      "cpu_temp": 67.13,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.63,
+      "chip_power": 21.71,
+      "fan_rpm": 5387
+    },
+    {
+      "t": 22.27,
+      "gpu_temp": 89.98,
+      "cpu_temp": 67.13,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.88,
+      "chip_power": 22.19,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 22.78,
+      "gpu_temp": 90.45,
+      "cpu_temp": 65.94,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.16,
+      "chip_power": 22.38,
+      "fan_rpm": 5327
+    },
+    {
+      "t": 23.28,
+      "gpu_temp": 90.45,
+      "cpu_temp": 65.94,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.9,
+      "gpu_power": 20.9,
+      "chip_power": 22.2,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 23.8,
+      "gpu_temp": 90.45,
+      "cpu_temp": 67.7,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.98,
+      "chip_power": 22.19,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 24.31,
+      "gpu_temp": 85.97,
+      "cpu_temp": 65.97,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.69,
+      "chip_power": 21.93,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 24.82,
+      "gpu_temp": 85.97,
+      "cpu_temp": 65.97,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.74,
+      "chip_power": 21.96,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 25.33,
+      "gpu_temp": 90.48,
+      "cpu_temp": 65.97,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.83,
+      "chip_power": 21.98,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 25.84,
+      "gpu_temp": 90.48,
+      "cpu_temp": 65.97,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.47,
+      "chip_power": 21.63,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 26.35,
+      "gpu_temp": 90.48,
+      "cpu_temp": 67.81,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.94,
+      "gpu_power": 21.24,
+      "chip_power": 22.48,
+      "fan_rpm": 5328
+    },
+    {
+      "t": 26.86,
+      "gpu_temp": 90.48,
+      "cpu_temp": 67.81,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.75,
+      "chip_power": 21.95,
+      "fan_rpm": 5367
+    },
+    {
+      "t": 27.37,
+      "gpu_temp": 90.55,
+      "cpu_temp": 69.05,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.82,
+      "gpu_power": 20.92,
+      "chip_power": 22.16,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 27.87,
+      "gpu_temp": 90.55,
+      "cpu_temp": 69.05,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.42,
+      "chip_power": 21.58,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 28.39,
+      "gpu_temp": 90.51,
+      "cpu_temp": 66.02,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 21.06,
+      "chip_power": 22.31,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 28.89,
+      "gpu_temp": 90.51,
+      "cpu_temp": 66.02,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.88,
+      "chip_power": 22.15,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 29.4,
+      "gpu_temp": 90.5,
+      "cpu_temp": 48.25,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.93,
+      "chip_power": 21.99,
+      "fan_rpm": 5386
+    },
+    {
+      "t": 29.92,
+      "gpu_temp": 90.5,
+      "cpu_temp": 48.25,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.97,
+      "chip_power": 22.13,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 30.43,
+      "gpu_temp": 90.32,
+      "cpu_temp": 67.27,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.78,
+      "gpu_power": 20.6,
+      "chip_power": 21.78,
+      "fan_rpm": 5367
+    },
+    {
+      "t": 30.93,
+      "gpu_temp": 90.32,
+      "cpu_temp": 67.27,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.11,
+      "chip_power": 22.28,
+      "fan_rpm": 5326
+    },
+    {
+      "t": 31.44,
+      "gpu_temp": 90.26,
+      "cpu_temp": 66.06,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.29,
+      "chip_power": 22.57,
+      "fan_rpm": 5308
+    },
+    {
+      "t": 31.95,
+      "gpu_temp": 90.26,
+      "cpu_temp": 66.06,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.84,
+      "chip_power": 20.47,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 32.47,
+      "gpu_temp": 89.03,
+      "cpu_temp": 66.27,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 17.51,
+      "chip_power": 19.28,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 32.97,
+      "gpu_temp": 89.03,
+      "cpu_temp": 66.27,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.87,
+      "gpu_power": 17.64,
+      "chip_power": 19.16,
+      "fan_rpm": 5345
+    },
+    {
+      "t": 33.48,
+      "gpu_temp": 88.3,
+      "cpu_temp": 69.79,
+      "gpu_mhz": 1576,
+      "gpu_busy": 99.33,
+      "gpu_power": 19.79,
+      "chip_power": 21.35,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 33.99,
+      "gpu_temp": 88.3,
+      "cpu_temp": 69.79,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.06,
+      "chip_power": 22.38,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 34.5,
+      "gpu_temp": 90.34,
+      "cpu_temp": 67.04,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.82,
+      "chip_power": 22.13,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 35.0,
+      "gpu_temp": 90.34,
+      "cpu_temp": 67.04,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.73,
+      "chip_power": 21.84,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 35.52,
+      "gpu_temp": 90.53,
+      "cpu_temp": 69.1,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.85,
+      "chip_power": 22.14,
+      "fan_rpm": 5367
+    },
+    {
+      "t": 36.02,
+      "gpu_temp": 90.53,
+      "cpu_temp": 69.1,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.84,
+      "gpu_power": 20.8,
+      "chip_power": 22.09,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 36.53,
+      "gpu_temp": 90.54,
+      "cpu_temp": 69.63,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.26,
+      "chip_power": 21.54,
+      "fan_rpm": 5310
+    },
+    {
+      "t": 37.04,
+      "gpu_temp": 90.54,
+      "cpu_temp": 69.63,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.26,
+      "chip_power": 22.53,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 37.55,
+      "gpu_temp": 90.61,
+      "cpu_temp": 67.33,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.88,
+      "chip_power": 22.2,
+      "fan_rpm": 5308
+    },
+    {
+      "t": 38.05,
+      "gpu_temp": 90.61,
+      "cpu_temp": 67.33,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.85,
+      "gpu_power": 20.71,
+      "chip_power": 22.04,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 38.57,
+      "gpu_temp": 90.57,
+      "cpu_temp": 69.29,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.77,
+      "chip_power": 21.91,
+      "fan_rpm": 5367
+    },
+    {
+      "t": 39.07,
+      "gpu_temp": 90.57,
+      "cpu_temp": 69.29,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.46,
+      "chip_power": 21.78,
+      "fan_rpm": 5328
+    },
+    {
+      "t": 39.58,
+      "gpu_temp": 90.67,
+      "cpu_temp": 67.38,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.39,
+      "chip_power": 22.74,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 40.08,
+      "gpu_temp": 90.67,
+      "cpu_temp": 67.38,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.85,
+      "gpu_power": 20.86,
+      "chip_power": 22.17,
+      "fan_rpm": 5309
+    },
+    {
+      "t": 40.6,
+      "gpu_temp": 90.74,
+      "cpu_temp": 67.4,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.74,
+      "chip_power": 22.1,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 41.11,
+      "gpu_temp": 90.74,
+      "cpu_temp": 67.4,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.82,
+      "gpu_power": 20.29,
+      "chip_power": 21.58,
+      "fan_rpm": 5390
+    },
+    {
+      "t": 41.63,
+      "gpu_temp": 90.64,
+      "cpu_temp": 69.17,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.35,
+      "chip_power": 22.67,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 42.13,
+      "gpu_temp": 90.64,
+      "cpu_temp": 69.17,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.82,
+      "chip_power": 22.09,
+      "fan_rpm": 5388
+    },
+    {
+      "t": 42.65,
+      "gpu_temp": 90.75,
+      "cpu_temp": 68.24,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.85,
+      "chip_power": 21.96,
+      "fan_rpm": 5329
+    },
+    {
+      "t": 43.15,
+      "gpu_temp": 90.75,
+      "cpu_temp": 68.24,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.92,
+      "gpu_power": 20.5,
+      "chip_power": 21.77,
+      "fan_rpm": 5350
+    },
+    {
+      "t": 43.66,
+      "gpu_temp": 90.68,
+      "cpu_temp": 69.94,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.37,
+      "chip_power": 21.63,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 44.18,
+      "gpu_temp": 90.68,
+      "cpu_temp": 69.94,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.04,
+      "chip_power": 22.34,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 44.68,
+      "gpu_temp": 90.81,
+      "cpu_temp": 66.96,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.89,
+      "chip_power": 22.17,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 45.2,
+      "gpu_temp": 90.81,
+      "cpu_temp": 66.96,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.72,
+      "gpu_power": 20.37,
+      "chip_power": 21.64,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 45.71,
+      "gpu_temp": 90.76,
+      "cpu_temp": 66.64,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.62,
+      "chip_power": 21.94,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 46.21,
+      "gpu_temp": 90.76,
+      "cpu_temp": 66.64,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.78,
+      "chip_power": 21.92,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 46.72,
+      "gpu_temp": 90.68,
+      "cpu_temp": 67.73,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.64,
+      "chip_power": 21.91,
+      "fan_rpm": 5367
+    },
+    {
+      "t": 47.23,
+      "gpu_temp": 90.68,
+      "cpu_temp": 67.73,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.19,
+      "chip_power": 22.46,
+      "fan_rpm": 5368
+    },
+    {
+      "t": 47.74,
+      "gpu_temp": 90.82,
+      "cpu_temp": 69.36,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.72,
+      "gpu_power": 20.17,
+      "chip_power": 21.47,
+      "fan_rpm": 5368
+    },
+    {
+      "t": 48.24,
+      "gpu_temp": 90.82,
+      "cpu_temp": 69.36,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.8,
+      "gpu_power": 21.13,
+      "chip_power": 22.55,
+      "fan_rpm": 5368
+    },
+    {
+      "t": 48.75,
+      "gpu_temp": 90.8,
+      "cpu_temp": 69.04,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.93,
+      "chip_power": 22.28,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 49.26,
+      "gpu_temp": 90.8,
+      "cpu_temp": 69.04,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.93,
+      "chip_power": 22.21,
+      "fan_rpm": 5309
+    },
+    {
+      "t": 49.77,
+      "gpu_temp": 90.92,
+      "cpu_temp": 70.04,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.69,
+      "chip_power": 21.96,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 50.27,
+      "gpu_temp": 90.92,
+      "cpu_temp": 70.04,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.98,
+      "chip_power": 22.13,
+      "fan_rpm": 5350
+    },
+    {
+      "t": 50.79,
+      "gpu_temp": 90.93,
+      "cpu_temp": 66.68,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.64,
+      "gpu_power": 20.77,
+      "chip_power": 22.09,
+      "fan_rpm": 5369
+    },
+    {
+      "t": 51.28,
+      "gpu_temp": 90.93,
+      "cpu_temp": 66.74,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.79,
+      "chip_power": 22.83,
+      "fan_rpm": 5328
+    },
+    {
+      "t": 51.8,
+      "gpu_temp": 90.94,
+      "cpu_temp": 66.54,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.89,
+      "chip_power": 23.37,
+      "fan_rpm": 5327
+    },
+    {
+      "t": 52.32,
+      "gpu_temp": 90.99,
+      "cpu_temp": 67.23,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.77,
+      "gpu_power": 20.77,
+      "chip_power": 22.32,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 52.83,
+      "gpu_temp": 90.99,
+      "cpu_temp": 67.23,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.53,
+      "chip_power": 21.8,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 53.34,
+      "gpu_temp": 90.79,
+      "cpu_temp": 70.09,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.86,
+      "chip_power": 22.13,
+      "fan_rpm": 5309
+    },
+    {
+      "t": 53.85,
+      "gpu_temp": 90.79,
+      "cpu_temp": 70.09,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.3,
+      "chip_power": 21.48,
+      "fan_rpm": 5365
+    },
+    {
+      "t": 54.35,
+      "gpu_temp": 90.95,
+      "cpu_temp": 66.37,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.94,
+      "chip_power": 22.1,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 54.86,
+      "gpu_temp": 90.95,
+      "cpu_temp": 66.37,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.93,
+      "chip_power": 22.19,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 55.36,
+      "gpu_temp": 91.05,
+      "cpu_temp": 66.4,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.81,
+      "gpu_power": 21.22,
+      "chip_power": 22.49,
+      "fan_rpm": 5310
+    },
+    {
+      "t": 55.87,
+      "gpu_temp": 91.05,
+      "cpu_temp": 66.4,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.1,
+      "chip_power": 22.43,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 56.38,
+      "gpu_temp": 91.07,
+      "cpu_temp": 48.38,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.84,
+      "chip_power": 22.07,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 56.89,
+      "gpu_temp": 91.07,
+      "cpu_temp": 48.38,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.83,
+      "chip_power": 22.06,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 57.4,
+      "gpu_temp": 90.5,
+      "cpu_temp": 66.18,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 18.58,
+      "chip_power": 20.14,
+      "fan_rpm": 5309
+    },
+    {
+      "t": 57.91,
+      "gpu_temp": 90.5,
+      "cpu_temp": 66.18,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 17.84,
+      "chip_power": 19.2,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 58.42,
+      "gpu_temp": 88.69,
+      "cpu_temp": 66.23,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.62,
+      "chip_power": 19.83,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 58.93,
+      "gpu_temp": 88.69,
+      "cpu_temp": 66.23,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.5,
+      "chip_power": 19.7,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 59.44,
+      "gpu_temp": 89.0,
+      "cpu_temp": 68.17,
+      "gpu_mhz": 1576,
+      "gpu_busy": 99.07,
+      "gpu_power": 19.59,
+      "chip_power": 21.06,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 59.94,
+      "gpu_temp": 89.0,
+      "cpu_temp": 68.17,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.27,
+      "chip_power": 22.57,
+      "fan_rpm": 5367
+    },
+    {
+      "t": 60.45,
+      "gpu_temp": 90.7,
+      "cpu_temp": 69.89,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.45,
+      "chip_power": 21.72,
+      "fan_rpm": 5307
+    },
+    {
+      "t": 60.96,
+      "gpu_temp": 90.7,
+      "cpu_temp": 69.89,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.33,
+      "chip_power": 22.69,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 61.47,
+      "gpu_temp": 90.84,
+      "cpu_temp": 68.26,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.93,
+      "chip_power": 22.23,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 61.98,
+      "gpu_temp": 90.84,
+      "cpu_temp": 68.26,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.98,
+      "chip_power": 22.33,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 62.49,
+      "gpu_temp": 90.92,
+      "cpu_temp": 67.99,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.76,
+      "chip_power": 22.23,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 63.0,
+      "gpu_temp": 90.92,
+      "cpu_temp": 67.99,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.15,
+      "chip_power": 22.73,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 63.5,
+      "gpu_temp": 91.05,
+      "cpu_temp": 68.41,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.99,
+      "chip_power": 22.3,
+      "fan_rpm": 5350
+    },
+    {
+      "t": 64.01,
+      "gpu_temp": 91.05,
+      "cpu_temp": 68.41,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.39,
+      "gpu_power": 20.5,
+      "chip_power": 21.68,
+      "fan_rpm": 5308
+    },
+    {
+      "t": 64.53,
+      "gpu_temp": 90.86,
+      "cpu_temp": 68.05,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.5,
+      "chip_power": 21.8,
+      "fan_rpm": 5310
+    },
+    {
+      "t": 65.03,
+      "gpu_temp": 90.86,
+      "cpu_temp": 68.05,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.93,
+      "chip_power": 22.27,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 65.54,
+      "gpu_temp": 90.97,
+      "cpu_temp": 68.87,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.88,
+      "gpu_power": 21.22,
+      "chip_power": 22.67,
+      "fan_rpm": 5388
+    },
+    {
+      "t": 66.06,
+      "gpu_temp": 90.97,
+      "cpu_temp": 68.87,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.51,
+      "chip_power": 21.81,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 66.57,
+      "gpu_temp": 90.98,
+      "cpu_temp": 66.34,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.8,
+      "gpu_power": 20.67,
+      "chip_power": 21.98,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 67.07,
+      "gpu_temp": 90.98,
+      "cpu_temp": 66.34,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.84,
+      "chip_power": 22.19,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 67.58,
+      "gpu_temp": 91.06,
+      "cpu_temp": 68.1,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.72,
+      "chip_power": 21.89,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 68.09,
+      "gpu_temp": 91.06,
+      "cpu_temp": 68.1,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.8,
+      "gpu_power": 20.59,
+      "chip_power": 21.9,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 68.61,
+      "gpu_temp": 91.01,
+      "cpu_temp": 67.6,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.92,
+      "chip_power": 22.28,
+      "fan_rpm": 5309
+    },
+    {
+      "t": 69.11,
+      "gpu_temp": 91.01,
+      "cpu_temp": 67.6,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.8,
+      "chip_power": 22.16,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 69.62,
+      "gpu_temp": 90.97,
+      "cpu_temp": 68.37,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.87,
+      "chip_power": 22.21,
+      "fan_rpm": 5329
+    },
+    {
+      "t": 70.13,
+      "gpu_temp": 90.97,
+      "cpu_temp": 68.37,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.76,
+      "gpu_power": 20.48,
+      "chip_power": 21.8,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 70.64,
+      "gpu_temp": 91.0,
+      "cpu_temp": 69.45,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.88,
+      "chip_power": 22.2,
+      "fan_rpm": 5309
+    },
+    {
+      "t": 71.15,
+      "gpu_temp": 91.0,
+      "cpu_temp": 69.45,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.78,
+      "gpu_power": 20.34,
+      "chip_power": 21.5,
+      "fan_rpm": 5387
+    },
+    {
+      "t": 71.66,
+      "gpu_temp": 90.98,
+      "cpu_temp": 67.72,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.79,
+      "chip_power": 22.12,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 72.17,
+      "gpu_temp": 90.98,
+      "cpu_temp": 67.72,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.83,
+      "chip_power": 22.19,
+      "fan_rpm": 5310
+    },
+    {
+      "t": 72.68,
+      "gpu_temp": 91.04,
+      "cpu_temp": 68.13,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.72,
+      "gpu_power": 20.66,
+      "chip_power": 21.99,
+      "fan_rpm": 5388
+    },
+    {
+      "t": 73.19,
+      "gpu_temp": 91.04,
+      "cpu_temp": 68.13,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.82,
+      "gpu_power": 20.76,
+      "chip_power": 22.28,
+      "fan_rpm": 5367
+    },
+    {
+      "t": 73.7,
+      "gpu_temp": 91.0,
+      "cpu_temp": 68.59,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.46,
+      "chip_power": 21.8,
+      "fan_rpm": 5308
+    },
+    {
+      "t": 74.21,
+      "gpu_temp": 91.0,
+      "cpu_temp": 68.59,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.79,
+      "chip_power": 22.09,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 74.72,
+      "gpu_temp": 91.07,
+      "cpu_temp": 70.08,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.22,
+      "chip_power": 22.43,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 75.23,
+      "gpu_temp": 91.07,
+      "cpu_temp": 70.08,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.85,
+      "chip_power": 22.29,
+      "fan_rpm": 5309
+    },
+    {
+      "t": 75.74,
+      "gpu_temp": 91.11,
+      "cpu_temp": 68.48,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.53,
+      "chip_power": 21.83,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 76.25,
+      "gpu_temp": 91.11,
+      "cpu_temp": 68.48,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.83,
+      "gpu_power": 21.01,
+      "chip_power": 22.38,
+      "fan_rpm": 5327
+    },
+    {
+      "t": 76.76,
+      "gpu_temp": 91.09,
+      "cpu_temp": 68.52,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.79,
+      "chip_power": 22.1,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 77.26,
+      "gpu_temp": 91.09,
+      "cpu_temp": 68.52,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.77,
+      "chip_power": 22.05,
+      "fan_rpm": 5369
+    },
+    {
+      "t": 77.78,
+      "gpu_temp": 91.14,
+      "cpu_temp": 66.36,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.95,
+      "gpu_power": 20.74,
+      "chip_power": 22.1,
+      "fan_rpm": 5345
+    },
+    {
+      "t": 78.27,
+      "gpu_temp": 91.14,
+      "cpu_temp": 66.36,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.67,
+      "gpu_power": 20.61,
+      "chip_power": 21.91,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 78.8,
+      "gpu_temp": 91.0,
+      "cpu_temp": 69.1,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.79,
+      "chip_power": 21.99,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 79.3,
+      "gpu_temp": 91.18,
+      "cpu_temp": 68.23,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.98,
+      "chip_power": 22.27,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 79.82,
+      "gpu_temp": 91.18,
+      "cpu_temp": 68.01,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.77,
+      "gpu_power": 20.59,
+      "chip_power": 21.96,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 80.33,
+      "gpu_temp": 91.12,
+      "cpu_temp": 69.6,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.91,
+      "chip_power": 22.24,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 80.84,
+      "gpu_temp": 91.12,
+      "cpu_temp": 69.6,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.64,
+      "gpu_power": 21.07,
+      "chip_power": 22.46,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 81.34,
+      "gpu_temp": 91.12,
+      "cpu_temp": 44.57,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.48,
+      "chip_power": 21.77,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 81.85,
+      "gpu_temp": 91.12,
+      "cpu_temp": 44.57,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.0,
+      "chip_power": 22.34,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 82.35,
+      "gpu_temp": 91.09,
+      "cpu_temp": 70.27,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.64,
+      "gpu_power": 20.58,
+      "chip_power": 21.8,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 82.86,
+      "gpu_temp": 91.09,
+      "cpu_temp": 70.27,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.77,
+      "gpu_power": 20.83,
+      "chip_power": 22.18,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 83.37,
+      "gpu_temp": 91.06,
+      "cpu_temp": 68.85,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.89,
+      "chip_power": 22.23,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 83.87,
+      "gpu_temp": 91.06,
+      "cpu_temp": 68.85,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.56,
+      "chip_power": 21.89,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 84.38,
+      "gpu_temp": 91.15,
+      "cpu_temp": 66.97,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.91,
+      "gpu_power": 21.12,
+      "chip_power": 22.5,
+      "fan_rpm": 5345
+    },
+    {
+      "t": 84.89,
+      "gpu_temp": 91.15,
+      "cpu_temp": 66.97,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.46,
+      "chip_power": 21.77,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 85.39,
+      "gpu_temp": 91.18,
+      "cpu_temp": 67.22,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.12,
+      "chip_power": 22.49,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 85.9,
+      "gpu_temp": 91.18,
+      "cpu_temp": 67.22,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.03,
+      "chip_power": 22.24,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 86.41,
+      "gpu_temp": 91.16,
+      "cpu_temp": 67.58,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.67,
+      "gpu_power": 20.37,
+      "chip_power": 21.68,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 86.91,
+      "gpu_temp": 91.16,
+      "cpu_temp": 67.58,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.08,
+      "chip_power": 22.41,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 87.42,
+      "gpu_temp": 91.14,
+      "cpu_temp": 69.17,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.55,
+      "chip_power": 21.88,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 87.94,
+      "gpu_temp": 91.14,
+      "cpu_temp": 69.17,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.0,
+      "chip_power": 22.35,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 88.45,
+      "gpu_temp": 91.2,
+      "cpu_temp": 67.72,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.23,
+      "chip_power": 22.62,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 88.96,
+      "gpu_temp": 91.2,
+      "cpu_temp": 67.72,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.73,
+      "chip_power": 22.02,
+      "fan_rpm": 5368
+    },
+    {
+      "t": 89.47,
+      "gpu_temp": 91.17,
+      "cpu_temp": 67.03,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.45,
+      "chip_power": 21.76,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 89.98,
+      "gpu_temp": 91.17,
+      "cpu_temp": 67.03,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.08,
+      "chip_power": 22.28,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 90.49,
+      "gpu_temp": 91.25,
+      "cpu_temp": 70.5,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.8,
+      "chip_power": 22.16,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 91.0,
+      "gpu_temp": 91.25,
+      "cpu_temp": 70.5,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.91,
+      "gpu_power": 20.94,
+      "chip_power": 22.27,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 91.51,
+      "gpu_temp": 91.19,
+      "cpu_temp": 68.31,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.76,
+      "gpu_power": 20.72,
+      "chip_power": 22.06,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 92.03,
+      "gpu_temp": 91.19,
+      "cpu_temp": 68.31,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.86,
+      "gpu_power": 21.13,
+      "chip_power": 23.77,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 92.53,
+      "gpu_temp": 91.19,
+      "cpu_temp": 69.69,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.8,
+      "chip_power": 22.19,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 93.04,
+      "gpu_temp": 91.19,
+      "cpu_temp": 69.69,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.54,
+      "chip_power": 21.88,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 93.55,
+      "gpu_temp": 91.35,
+      "cpu_temp": 67.61,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.17,
+      "chip_power": 22.56,
+      "fan_rpm": 5309
+    },
+    {
+      "t": 94.05,
+      "gpu_temp": 91.35,
+      "cpu_temp": 67.61,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.82,
+      "gpu_power": 20.68,
+      "chip_power": 21.89,
+      "fan_rpm": 5328
+    },
+    {
+      "t": 94.57,
+      "gpu_temp": 91.25,
+      "cpu_temp": 66.63,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.9,
+      "chip_power": 22.26,
+      "fan_rpm": 5367
+    },
+    {
+      "t": 95.07,
+      "gpu_temp": 91.25,
+      "cpu_temp": 66.63,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.21,
+      "chip_power": 22.65,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 95.58,
+      "gpu_temp": 91.39,
+      "cpu_temp": 67.86,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.57,
+      "chip_power": 22.06,
+      "fan_rpm": 5387
+    },
+    {
+      "t": 96.09,
+      "gpu_temp": 91.39,
+      "cpu_temp": 67.86,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.69,
+      "gpu_power": 20.97,
+      "chip_power": 22.41,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 96.6,
+      "gpu_temp": 91.3,
+      "cpu_temp": 67.38,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.74,
+      "gpu_power": 20.66,
+      "chip_power": 21.98,
+      "fan_rpm": 5328
+    },
+    {
+      "t": 97.11,
+      "gpu_temp": 91.3,
+      "cpu_temp": 67.38,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.77,
+      "chip_power": 22.09,
+      "fan_rpm": 5307
+    },
+    {
+      "t": 97.62,
+      "gpu_temp": 91.25,
+      "cpu_temp": 69.41,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.76,
+      "chip_power": 22.07,
+      "fan_rpm": 5308
+    },
+    {
+      "t": 98.13,
+      "gpu_temp": 91.25,
+      "cpu_temp": 69.41,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.19,
+      "chip_power": 22.4,
+      "fan_rpm": 5386
+    },
+    {
+      "t": 98.65,
+      "gpu_temp": 91.36,
+      "cpu_temp": 66.64,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.68,
+      "chip_power": 22.06,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 99.16,
+      "gpu_temp": 91.36,
+      "cpu_temp": 66.64,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.24,
+      "chip_power": 22.6,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 99.67,
+      "gpu_temp": 91.39,
+      "cpu_temp": 70.46,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.81,
+      "chip_power": 22.14,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 100.18,
+      "gpu_temp": 91.39,
+      "cpu_temp": 70.46,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.97,
+      "chip_power": 22.3,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 100.69,
+      "gpu_temp": 91.39,
+      "cpu_temp": 67.82,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.52,
+      "gpu_power": 20.45,
+      "chip_power": 21.77,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 101.2,
+      "gpu_temp": 91.39,
+      "cpu_temp": 67.82,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.71,
+      "chip_power": 22.06,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 101.71,
+      "gpu_temp": 91.17,
+      "cpu_temp": 67.94,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.73,
+      "gpu_power": 20.75,
+      "chip_power": 22.08,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 102.22,
+      "gpu_temp": 91.17,
+      "cpu_temp": 67.94,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.92,
+      "chip_power": 22.19,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 102.73,
+      "gpu_temp": 91.37,
+      "cpu_temp": 70.45,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.79,
+      "chip_power": 22.1,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 103.24,
+      "gpu_temp": 91.37,
+      "cpu_temp": 70.45,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.36,
+      "chip_power": 22.71,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 103.75,
+      "gpu_temp": 91.41,
+      "cpu_temp": 70.46,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.9,
+      "chip_power": 22.25,
+      "fan_rpm": 5367
+    },
+    {
+      "t": 104.26,
+      "gpu_temp": 91.41,
+      "cpu_temp": 70.46,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.7,
+      "chip_power": 22.01,
+      "fan_rpm": 5306
+    },
+    {
+      "t": 104.77,
+      "gpu_temp": 91.44,
+      "cpu_temp": 69.61,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.8,
+      "chip_power": 22.1,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 105.27,
+      "gpu_temp": 91.44,
+      "cpu_temp": 69.61,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.85,
+      "chip_power": 22.19,
+      "fan_rpm": 5308
+    },
+    {
+      "t": 105.79,
+      "gpu_temp": 91.43,
+      "cpu_temp": 66.68,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.74,
+      "gpu_power": 20.92,
+      "chip_power": 22.2,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 106.28,
+      "gpu_temp": 91.43,
+      "cpu_temp": 66.66,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.76,
+      "gpu_power": 21.16,
+      "chip_power": 22.37,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 106.8,
+      "gpu_temp": 91.42,
+      "cpu_temp": 67.85,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.94,
+      "chip_power": 22.22,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 107.31,
+      "gpu_temp": 91.45,
+      "cpu_temp": 49.05,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.74,
+      "chip_power": 22.0,
+      "fan_rpm": 5366
+    },
+    {
+      "t": 107.82,
+      "gpu_temp": 91.45,
+      "cpu_temp": 49.05,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.36,
+      "chip_power": 22.69,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 108.34,
+      "gpu_temp": 91.41,
+      "cpu_temp": 68.72,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.77,
+      "gpu_power": 20.61,
+      "chip_power": 21.86,
+      "fan_rpm": 5307
+    },
+    {
+      "t": 108.84,
+      "gpu_temp": 91.41,
+      "cpu_temp": 68.72,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.08,
+      "chip_power": 22.34,
+      "fan_rpm": 5345
+    },
+    {
+      "t": 109.35,
+      "gpu_temp": 91.48,
+      "cpu_temp": 67.85,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.02,
+      "chip_power": 22.24,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 109.86,
+      "gpu_temp": 91.48,
+      "cpu_temp": 67.85,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.13,
+      "chip_power": 22.27,
+      "fan_rpm": 5345
+    },
+    {
+      "t": 110.36,
+      "gpu_temp": 91.38,
+      "cpu_temp": 66.55,
+      "gpu_mhz": 1576,
+      "gpu_busy": 99.59,
+      "gpu_power": 20.09,
+      "chip_power": 21.31,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 110.88,
+      "gpu_temp": 91.38,
+      "cpu_temp": 66.55,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.31,
+      "chip_power": 22.53,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 111.39,
+      "gpu_temp": 91.26,
+      "cpu_temp": 66.48,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.95,
+      "chip_power": 22.04,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 111.89,
+      "gpu_temp": 91.26,
+      "cpu_temp": 66.48,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.17,
+      "chip_power": 22.34,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 112.41,
+      "gpu_temp": 91.13,
+      "cpu_temp": 66.44,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.91,
+      "chip_power": 22.0,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 112.92,
+      "gpu_temp": 91.13,
+      "cpu_temp": 66.44,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.15,
+      "chip_power": 22.26,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 113.43,
+      "gpu_temp": 91.42,
+      "cpu_temp": 66.49,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 22.1,
+      "chip_power": 23.2,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 113.94,
+      "gpu_temp": 91.42,
+      "cpu_temp": 66.49,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.85,
+      "chip_power": 22.84,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 114.45,
+      "gpu_temp": 91.28,
+      "cpu_temp": 68.64,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.1,
+      "gpu_power": 19.07,
+      "chip_power": 20.45,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 114.96,
+      "gpu_temp": 91.28,
+      "cpu_temp": 68.64,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.44,
+      "chip_power": 19.53,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 115.47,
+      "gpu_temp": 89.32,
+      "cpu_temp": 66.39,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.3,
+      "chip_power": 19.36,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 115.98,
+      "gpu_temp": 89.32,
+      "cpu_temp": 66.39,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.61,
+      "chip_power": 19.91,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 116.49,
+      "gpu_temp": 89.24,
+      "cpu_temp": 66.32,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.42,
+      "chip_power": 19.59,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 116.99,
+      "gpu_temp": 89.24,
+      "cpu_temp": 66.32,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.85,
+      "chip_power": 20.05,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 117.5,
+      "gpu_temp": 89.15,
+      "cpu_temp": 66.26,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.69,
+      "gpu_power": 18.4,
+      "chip_power": 19.6,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 118.0,
+      "gpu_temp": 89.15,
+      "cpu_temp": 66.26,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.85,
+      "gpu_power": 17.89,
+      "chip_power": 19.08,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 118.52,
+      "gpu_temp": 84.64,
+      "cpu_temp": 66.32,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.72,
+      "chip_power": 19.93,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 119.02,
+      "gpu_temp": 84.64,
+      "cpu_temp": 66.32,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.01,
+      "chip_power": 19.06,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 119.53,
+      "gpu_temp": 88.89,
+      "cpu_temp": 66.3,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.58,
+      "chip_power": 19.84,
+      "fan_rpm": 5388
+    },
+    {
+      "t": 120.04,
+      "gpu_temp": 88.89,
+      "cpu_temp": 66.3,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.17,
+      "chip_power": 19.37,
+      "fan_rpm": 5367
+    },
+    {
+      "t": 120.55,
+      "gpu_temp": 88.89,
+      "cpu_temp": 66.07,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.76,
+      "chip_power": 19.99,
+      "fan_rpm": 5327
+    },
+    {
+      "t": 121.06,
+      "gpu_temp": 88.89,
+      "cpu_temp": 66.07,
+      "gpu_mhz": 1577,
+      "gpu_busy": 98.99,
+      "gpu_power": 19.83,
+      "chip_power": 20.91,
+      "fan_rpm": 5309
+    },
+    {
+      "t": 121.57,
+      "gpu_temp": 90.06,
+      "cpu_temp": 66.12,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.53,
+      "chip_power": 22.56,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 122.07,
+      "gpu_temp": 90.06,
+      "cpu_temp": 66.12,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.69,
+      "chip_power": 22.74,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 122.58,
+      "gpu_temp": 91.32,
+      "cpu_temp": 66.22,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.67,
+      "chip_power": 22.74,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 123.09,
+      "gpu_temp": 91.32,
+      "cpu_temp": 66.22,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 22.02,
+      "chip_power": 22.92,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 123.6,
+      "gpu_temp": 91.49,
+      "cpu_temp": 66.42,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 22.04,
+      "chip_power": 23.07,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 124.11,
+      "gpu_temp": 91.49,
+      "cpu_temp": 66.42,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 22.12,
+      "chip_power": 23.15,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 124.62,
+      "gpu_temp": 91.62,
+      "cpu_temp": 66.33,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 22.19,
+      "chip_power": 23.33,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 125.13,
+      "gpu_temp": 91.62,
+      "cpu_temp": 66.33,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.64,
+      "gpu_power": 21.64,
+      "chip_power": 22.79,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 125.65,
+      "gpu_temp": 91.17,
+      "cpu_temp": 66.94,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 17.81,
+      "chip_power": 19.44,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 126.15,
+      "gpu_temp": 91.17,
+      "cpu_temp": 66.94,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 17.89,
+      "chip_power": 19.55,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 126.67,
+      "gpu_temp": 88.8,
+      "cpu_temp": 66.4,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 17.76,
+      "chip_power": 19.33,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 127.17,
+      "gpu_temp": 88.8,
+      "cpu_temp": 66.4,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.13,
+      "chip_power": 19.73,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 127.68,
+      "gpu_temp": 88.61,
+      "cpu_temp": 66.33,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.5,
+      "chip_power": 20.17,
+      "fan_rpm": 5310
+    },
+    {
+      "t": 128.19,
+      "gpu_temp": 88.61,
+      "cpu_temp": 66.33,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.28,
+      "chip_power": 20.04,
+      "fan_rpm": 5308
+    },
+    {
+      "t": 128.71,
+      "gpu_temp": 88.66,
+      "cpu_temp": 66.21,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.94,
+      "gpu_power": 20.82,
+      "chip_power": 22.05,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 129.21,
+      "gpu_temp": 88.66,
+      "cpu_temp": 66.21,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.28,
+      "chip_power": 22.43,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 129.72,
+      "gpu_temp": 90.96,
+      "cpu_temp": 66.34,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.95,
+      "chip_power": 23.12,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 130.23,
+      "gpu_temp": 90.96,
+      "cpu_temp": 66.34,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.96,
+      "chip_power": 23.02,
+      "fan_rpm": 5308
+    },
+    {
+      "t": 130.73,
+      "gpu_temp": 91.39,
+      "cpu_temp": 66.3,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.32,
+      "chip_power": 22.24,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 131.24,
+      "gpu_temp": 91.39,
+      "cpu_temp": 66.3,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.99,
+      "chip_power": 23.06,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 131.75,
+      "gpu_temp": 91.49,
+      "cpu_temp": 68.38,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 22.07,
+      "chip_power": 23.09,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 132.26,
+      "gpu_temp": 91.49,
+      "cpu_temp": 68.38,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 22.09,
+      "chip_power": 23.33,
+      "fan_rpm": 5368
+    },
+    {
+      "t": 132.78,
+      "gpu_temp": 91.66,
+      "cpu_temp": 66.39,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.53,
+      "chip_power": 22.6,
+      "fan_rpm": 5387
+    },
+    {
+      "t": 133.27,
+      "gpu_temp": 91.66,
+      "cpu_temp": 66.39,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.84,
+      "chip_power": 20.02,
+      "fan_rpm": 5327
+    },
+    {
+      "t": 133.79,
+      "gpu_temp": 90.49,
+      "cpu_temp": 66.39,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.57,
+      "chip_power": 19.78,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 134.28,
+      "gpu_temp": 90.49,
+      "cpu_temp": 68.08,
+      "gpu_mhz": 1576,
+      "gpu_busy": 99.01,
+      "gpu_power": 20.13,
+      "chip_power": 21.39,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 134.81,
+      "gpu_temp": 89.85,
+      "cpu_temp": 68.05,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.28,
+      "chip_power": 22.51,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 135.32,
+      "gpu_temp": 91.11,
+      "cpu_temp": 66.35,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.61,
+      "chip_power": 21.83,
+      "fan_rpm": 5367
+    },
+    {
+      "t": 135.83,
+      "gpu_temp": 91.11,
+      "cpu_temp": 66.35,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.92,
+      "chip_power": 22.09,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 136.33,
+      "gpu_temp": 91.17,
+      "cpu_temp": 44.24,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.92,
+      "gpu_power": 20.95,
+      "chip_power": 22.16,
+      "fan_rpm": 5345
+    },
+    {
+      "t": 136.84,
+      "gpu_temp": 91.17,
+      "cpu_temp": 44.24,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.1,
+      "chip_power": 22.38,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 137.35,
+      "gpu_temp": 87.07,
+      "cpu_temp": 66.53,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.88,
+      "gpu_power": 20.65,
+      "chip_power": 21.92,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 137.86,
+      "gpu_temp": 87.07,
+      "cpu_temp": 66.53,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 21.06,
+      "chip_power": 22.34,
+      "fan_rpm": 5385
+    },
+    {
+      "t": 138.37,
+      "gpu_temp": 91.19,
+      "cpu_temp": 66.54,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.12,
+      "chip_power": 22.49,
+      "fan_rpm": 5328
+    },
+    {
+      "t": 138.87,
+      "gpu_temp": 91.19,
+      "cpu_temp": 66.54,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.65,
+      "chip_power": 21.92,
+      "fan_rpm": 5366
+    },
+    {
+      "t": 139.38,
+      "gpu_temp": 91.32,
+      "cpu_temp": 66.4,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.61,
+      "chip_power": 22.95,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 139.89,
+      "gpu_temp": 91.32,
+      "cpu_temp": 66.4,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.3,
+      "chip_power": 22.46,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 140.4,
+      "gpu_temp": 91.47,
+      "cpu_temp": 66.61,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.62,
+      "chip_power": 22.86,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 140.92,
+      "gpu_temp": 91.47,
+      "cpu_temp": 66.61,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.8,
+      "gpu_power": 21.23,
+      "chip_power": 22.51,
+      "fan_rpm": 5308
+    },
+    {
+      "t": 141.43,
+      "gpu_temp": 91.48,
+      "cpu_temp": 68.01,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.83,
+      "chip_power": 22.34,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 141.94,
+      "gpu_temp": 91.48,
+      "cpu_temp": 68.01,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.25,
+      "chip_power": 22.5,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 142.45,
+      "gpu_temp": 91.26,
+      "cpu_temp": 66.66,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.15,
+      "chip_power": 21.54,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 142.96,
+      "gpu_temp": 91.26,
+      "cpu_temp": 66.66,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.32,
+      "chip_power": 21.86,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 143.46,
+      "gpu_temp": 90.43,
+      "cpu_temp": 66.69,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 19.38,
+      "chip_power": 20.72,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 143.98,
+      "gpu_temp": 90.43,
+      "cpu_temp": 66.69,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 19.95,
+      "chip_power": 21.5,
+      "fan_rpm": 5387
+    },
+    {
+      "t": 144.49,
+      "gpu_temp": 90.33,
+      "cpu_temp": 66.66,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.86,
+      "gpu_power": 19.47,
+      "chip_power": 21.24,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 145.0,
+      "gpu_temp": 90.33,
+      "cpu_temp": 66.66,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 19.95,
+      "chip_power": 21.51,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 145.51,
+      "gpu_temp": 90.25,
+      "cpu_temp": 66.71,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 19.49,
+      "chip_power": 21.0,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 146.02,
+      "gpu_temp": 90.25,
+      "cpu_temp": 66.71,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 19.96,
+      "chip_power": 21.5,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 146.53,
+      "gpu_temp": 90.27,
+      "cpu_temp": 66.64,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.01,
+      "chip_power": 21.55,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 147.04,
+      "gpu_temp": 90.27,
+      "cpu_temp": 66.64,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.13,
+      "chip_power": 21.5,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 147.55,
+      "gpu_temp": 90.38,
+      "cpu_temp": 66.59,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.13,
+      "chip_power": 21.64,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 148.05,
+      "gpu_temp": 90.38,
+      "cpu_temp": 66.59,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.43,
+      "chip_power": 22.69,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 148.57,
+      "gpu_temp": 90.62,
+      "cpu_temp": 66.62,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.95,
+      "chip_power": 20.16,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 149.07,
+      "gpu_temp": 90.62,
+      "cpu_temp": 66.62,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 19.04,
+      "chip_power": 20.23,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 149.59,
+      "gpu_temp": 89.41,
+      "cpu_temp": 66.4,
+      "gpu_mhz": 1577,
+      "gpu_busy": 98.7,
+      "gpu_power": 19.8,
+      "chip_power": 21.05,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 150.09,
+      "gpu_temp": 89.41,
+      "cpu_temp": 66.4,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.94,
+      "chip_power": 22.25,
+      "fan_rpm": 5386
+    },
+    {
+      "t": 150.6,
+      "gpu_temp": 90.95,
+      "cpu_temp": 68.41,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.11,
+      "chip_power": 22.4,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 151.11,
+      "gpu_temp": 90.95,
+      "cpu_temp": 68.41,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.42,
+      "chip_power": 22.72,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 151.62,
+      "gpu_temp": 91.25,
+      "cpu_temp": 68.66,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.99,
+      "chip_power": 22.28,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 152.13,
+      "gpu_temp": 91.25,
+      "cpu_temp": 68.66,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.99,
+      "chip_power": 23.76,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 152.65,
+      "gpu_temp": 91.43,
+      "cpu_temp": 70.35,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 21.18,
+      "chip_power": 22.54,
+      "fan_rpm": 5368
+    },
+    {
+      "t": 153.16,
+      "gpu_temp": 91.43,
+      "cpu_temp": 70.35,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.11,
+      "chip_power": 22.5,
+      "fan_rpm": 5328
+    },
+    {
+      "t": 153.66,
+      "gpu_temp": 91.41,
+      "cpu_temp": 67.82,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.34,
+      "chip_power": 24.96,
+      "fan_rpm": 5367
+    },
+    {
+      "t": 154.17,
+      "gpu_temp": 91.41,
+      "cpu_temp": 67.82,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.86,
+      "gpu_power": 21.57,
+      "chip_power": 31.08,
+      "fan_rpm": 5367
+    },
+    {
+      "t": 154.68,
+      "gpu_temp": 91.74,
+      "cpu_temp": 72.95,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.93,
+      "gpu_power": 22.28,
+      "chip_power": 28.17,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 155.2,
+      "gpu_temp": 91.74,
+      "cpu_temp": 72.95,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 22.12,
+      "chip_power": 25.55,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 155.71,
+      "gpu_temp": 92.09,
+      "cpu_temp": 69.29,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.91,
+      "chip_power": 25.09,
+      "fan_rpm": 5308
+    },
+    {
+      "t": 156.22,
+      "gpu_temp": 92.09,
+      "cpu_temp": 69.29,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.76,
+      "chip_power": 23.29,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 156.74,
+      "gpu_temp": 92.06,
+      "cpu_temp": 69.46,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.82,
+      "gpu_power": 21.3,
+      "chip_power": 22.76,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 157.24,
+      "gpu_temp": 92.06,
+      "cpu_temp": 69.46,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.79,
+      "gpu_power": 20.63,
+      "chip_power": 21.75,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 157.75,
+      "gpu_temp": 91.79,
+      "cpu_temp": 66.98,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.3,
+      "chip_power": 24.25,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 158.26,
+      "gpu_temp": 91.79,
+      "cpu_temp": 66.98,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.77,
+      "chip_power": 29.11,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 158.77,
+      "gpu_temp": 92.11,
+      "cpu_temp": 71.98,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.68,
+      "chip_power": 26.83,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 159.27,
+      "gpu_temp": 92.11,
+      "cpu_temp": 71.98,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.69,
+      "gpu_power": 20.66,
+      "chip_power": 21.97,
+      "fan_rpm": 5386
+    },
+    {
+      "t": 159.79,
+      "gpu_temp": 92.16,
+      "cpu_temp": 68.55,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.92,
+      "chip_power": 22.21,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 160.28,
+      "gpu_temp": 92.16,
+      "cpu_temp": 67.99,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.04,
+      "chip_power": 22.29,
+      "fan_rpm": 5367
+    },
+    {
+      "t": 160.8,
+      "gpu_temp": 91.99,
+      "cpu_temp": 68.61,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.09,
+      "chip_power": 22.27,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 161.29,
+      "gpu_temp": 91.95,
+      "cpu_temp": 70.2,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.95,
+      "chip_power": 22.71,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 161.8,
+      "gpu_temp": 91.95,
+      "cpu_temp": 68.13,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.93,
+      "gpu_power": 20.99,
+      "chip_power": 22.89,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 162.31,
+      "gpu_temp": 92.02,
+      "cpu_temp": 69.71,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.22,
+      "chip_power": 23.12,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 162.82,
+      "gpu_temp": 92.02,
+      "cpu_temp": 69.71,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.16,
+      "chip_power": 23.06,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 163.33,
+      "gpu_temp": 92.12,
+      "cpu_temp": 69.3,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.28,
+      "chip_power": 22.77,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 163.84,
+      "gpu_temp": 92.12,
+      "cpu_temp": 69.3,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.14,
+      "chip_power": 22.43,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 164.35,
+      "gpu_temp": 91.96,
+      "cpu_temp": 69.14,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.95,
+      "chip_power": 22.19,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 164.86,
+      "gpu_temp": 91.96,
+      "cpu_temp": 69.14,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.92,
+      "gpu_power": 21.55,
+      "chip_power": 22.77,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 165.36,
+      "gpu_temp": 92.05,
+      "cpu_temp": 68.95,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.94,
+      "gpu_power": 20.79,
+      "chip_power": 22.03,
+      "fan_rpm": 5386
+    },
+    {
+      "t": 165.87,
+      "gpu_temp": 92.05,
+      "cpu_temp": 68.95,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.81,
+      "gpu_power": 21.25,
+      "chip_power": 22.57,
+      "fan_rpm": 5310
+    },
+    {
+      "t": 166.38,
+      "gpu_temp": 92.02,
+      "cpu_temp": 68.91,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.11,
+      "chip_power": 22.37,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 166.89,
+      "gpu_temp": 92.02,
+      "cpu_temp": 68.91,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.47,
+      "chip_power": 22.77,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 167.4,
+      "gpu_temp": 92.02,
+      "cpu_temp": 67.53,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.81,
+      "gpu_power": 20.94,
+      "chip_power": 24.31,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 167.91,
+      "gpu_temp": 92.02,
+      "cpu_temp": 67.53,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.41,
+      "chip_power": 22.95,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 168.41,
+      "gpu_temp": 92.11,
+      "cpu_temp": 67.57,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.3,
+      "chip_power": 22.57,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 168.93,
+      "gpu_temp": 92.11,
+      "cpu_temp": 67.57,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.88,
+      "chip_power": 22.15,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 169.43,
+      "gpu_temp": 92.08,
+      "cpu_temp": 69.15,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.53,
+      "chip_power": 22.9,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 169.94,
+      "gpu_temp": 92.08,
+      "cpu_temp": 69.15,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.65,
+      "chip_power": 23.02,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 170.44,
+      "gpu_temp": 92.11,
+      "cpu_temp": 48.87,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.74,
+      "gpu_power": 21.02,
+      "chip_power": 22.45,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 170.95,
+      "gpu_temp": 92.11,
+      "cpu_temp": 48.87,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.38,
+      "chip_power": 21.62,
+      "fan_rpm": 5309
+    },
+    {
+      "t": 171.46,
+      "gpu_temp": 91.97,
+      "cpu_temp": 68.24,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.35,
+      "chip_power": 22.69,
+      "fan_rpm": 5369
+    },
+    {
+      "t": 171.96,
+      "gpu_temp": 91.97,
+      "cpu_temp": 68.24,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.05,
+      "chip_power": 22.15,
+      "fan_rpm": 5310
+    },
+    {
+      "t": 172.47,
+      "gpu_temp": 92.03,
+      "cpu_temp": 67.14,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 21.46,
+      "chip_power": 23.01,
+      "fan_rpm": 5368
+    },
+    {
+      "t": 172.98,
+      "gpu_temp": 92.03,
+      "cpu_temp": 67.14,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.12,
+      "chip_power": 22.36,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 173.48,
+      "gpu_temp": 92.08,
+      "cpu_temp": 68.9,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.27,
+      "chip_power": 23.79,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 173.99,
+      "gpu_temp": 92.08,
+      "cpu_temp": 68.9,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 22.02,
+      "chip_power": 24.94,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 174.5,
+      "gpu_temp": 92.1,
+      "cpu_temp": 69.57,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 22.37,
+      "chip_power": 25.31,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 175.02,
+      "gpu_temp": 92.1,
+      "cpu_temp": 69.57,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 21.05,
+      "chip_power": 23.85,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 175.52,
+      "gpu_temp": 91.43,
+      "cpu_temp": 67.6,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.46,
+      "chip_power": 20.42,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 176.03,
+      "gpu_temp": 91.43,
+      "cpu_temp": 67.6,
+      "gpu_mhz": 1576,
+      "gpu_busy": 98.63,
+      "gpu_power": 18.89,
+      "chip_power": 20.45,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 176.53,
+      "gpu_temp": 90.66,
+      "cpu_temp": 67.65,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.33,
+      "chip_power": 22.68,
+      "fan_rpm": 5308
+    },
+    {
+      "t": 177.04,
+      "gpu_temp": 90.66,
+      "cpu_temp": 67.65,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.93,
+      "chip_power": 22.26,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 177.56,
+      "gpu_temp": 91.91,
+      "cpu_temp": 70.97,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.84,
+      "chip_power": 22.19,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 178.06,
+      "gpu_temp": 91.91,
+      "cpu_temp": 70.97,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.33,
+      "chip_power": 22.54,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 178.57,
+      "gpu_temp": 91.99,
+      "cpu_temp": 68.22,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.94,
+      "gpu_power": 21.26,
+      "chip_power": 22.62,
+      "fan_rpm": 5309
+    },
+    {
+      "t": 179.07,
+      "gpu_temp": 91.99,
+      "cpu_temp": 68.22,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.15,
+      "chip_power": 22.48,
+      "fan_rpm": 5327
+    },
+    {
+      "t": 179.57,
+      "gpu_temp": 91.97,
+      "cpu_temp": 68.21,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.59,
+      "chip_power": 22.05,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 180.08,
+      "gpu_temp": 91.97,
+      "cpu_temp": 68.21,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.26,
+      "chip_power": 22.68,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 180.59,
+      "gpu_temp": 92.04,
+      "cpu_temp": 70.96,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.42,
+      "chip_power": 22.78,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 181.1,
+      "gpu_temp": 92.04,
+      "cpu_temp": 70.96,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.76,
+      "gpu_power": 20.57,
+      "chip_power": 21.93,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 181.61,
+      "gpu_temp": 91.93,
+      "cpu_temp": 67.98,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.13,
+      "chip_power": 22.32,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 182.12,
+      "gpu_temp": 91.93,
+      "cpu_temp": 67.98,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.04,
+      "chip_power": 22.56,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 182.63,
+      "gpu_temp": 92.04,
+      "cpu_temp": 70.98,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.54,
+      "chip_power": 23.05,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 183.15,
+      "gpu_temp": 92.04,
+      "cpu_temp": 70.98,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.7,
+      "gpu_power": 21.22,
+      "chip_power": 24.91,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 183.66,
+      "gpu_temp": 92.13,
+      "cpu_temp": 69.67,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 21.27,
+      "chip_power": 22.66,
+      "fan_rpm": 5327
+    },
+    {
+      "t": 184.16,
+      "gpu_temp": 92.13,
+      "cpu_temp": 69.67,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.08,
+      "chip_power": 22.45,
+      "fan_rpm": 5307
+    },
+    {
+      "t": 184.67,
+      "gpu_temp": 92.09,
+      "cpu_temp": 68.52,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.7,
+      "chip_power": 22.09,
+      "fan_rpm": 5367
+    },
+    {
+      "t": 185.18,
+      "gpu_temp": 92.09,
+      "cpu_temp": 68.52,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.98,
+      "chip_power": 22.16,
+      "fan_rpm": 5309
+    },
+    {
+      "t": 185.69,
+      "gpu_temp": 92.11,
+      "cpu_temp": 68.57,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.92,
+      "gpu_power": 20.6,
+      "chip_power": 21.93,
+      "fan_rpm": 5327
+    },
+    {
+      "t": 186.2,
+      "gpu_temp": 92.11,
+      "cpu_temp": 68.57,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.11,
+      "chip_power": 22.62,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 186.71,
+      "gpu_temp": 91.96,
+      "cpu_temp": 67.36,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.86,
+      "chip_power": 22.3,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 187.21,
+      "gpu_temp": 91.96,
+      "cpu_temp": 67.36,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.71,
+      "gpu_power": 20.99,
+      "chip_power": 22.36,
+      "fan_rpm": 5387
+    },
+    {
+      "t": 187.72,
+      "gpu_temp": 91.98,
+      "cpu_temp": 69.4,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.88,
+      "chip_power": 22.21,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 188.23,
+      "gpu_temp": 91.98,
+      "cpu_temp": 69.4,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.68,
+      "chip_power": 22.07,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 188.75,
+      "gpu_temp": 92.02,
+      "cpu_temp": 71.01,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.35,
+      "chip_power": 22.7,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 189.26,
+      "gpu_temp": 92.02,
+      "cpu_temp": 71.01,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.94,
+      "chip_power": 22.18,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 189.77,
+      "gpu_temp": 92.07,
+      "cpu_temp": 70.99,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.96,
+      "chip_power": 22.63,
+      "fan_rpm": 5308
+    },
+    {
+      "t": 190.27,
+      "gpu_temp": 92.07,
+      "cpu_temp": 70.99,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.65,
+      "gpu_power": 21.08,
+      "chip_power": 23.81,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 190.79,
+      "gpu_temp": 92.09,
+      "cpu_temp": 48.47,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.9,
+      "gpu_power": 21.4,
+      "chip_power": 24.07,
+      "fan_rpm": 5367
+    },
+    {
+      "t": 191.28,
+      "gpu_temp": 92.09,
+      "cpu_temp": 68.33,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.68,
+      "chip_power": 22.03,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 191.8,
+      "gpu_temp": 92.22,
+      "cpu_temp": 67.81,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.56,
+      "gpu_power": 20.88,
+      "chip_power": 22.19,
+      "fan_rpm": 5367
+    },
+    {
+      "t": 192.31,
+      "gpu_temp": 91.99,
+      "cpu_temp": 69.4,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.36,
+      "chip_power": 23.21,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 192.82,
+      "gpu_temp": 91.99,
+      "cpu_temp": 69.4,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.93,
+      "chip_power": 22.11,
+      "fan_rpm": 5366
+    },
+    {
+      "t": 193.33,
+      "gpu_temp": 92.05,
+      "cpu_temp": 70.62,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.51,
+      "chip_power": 21.83,
+      "fan_rpm": 5366
+    },
+    {
+      "t": 193.83,
+      "gpu_temp": 92.05,
+      "cpu_temp": 70.62,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.36,
+      "chip_power": 23.34,
+      "fan_rpm": 5327
+    },
+    {
+      "t": 194.34,
+      "gpu_temp": 92.26,
+      "cpu_temp": 68.55,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 22.12,
+      "chip_power": 24.46,
+      "fan_rpm": 5326
+    },
+    {
+      "t": 194.85,
+      "gpu_temp": 92.26,
+      "cpu_temp": 68.55,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.64,
+      "chip_power": 23.72,
+      "fan_rpm": 5368
+    },
+    {
+      "t": 195.36,
+      "gpu_temp": 92.35,
+      "cpu_temp": 68.94,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.86,
+      "gpu_power": 20.86,
+      "chip_power": 22.94,
+      "fan_rpm": 5327
+    },
+    {
+      "t": 195.87,
+      "gpu_temp": 92.35,
+      "cpu_temp": 68.94,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 21.17,
+      "chip_power": 23.3,
+      "fan_rpm": 5368
+    },
+    {
+      "t": 196.39,
+      "gpu_temp": 92.15,
+      "cpu_temp": 69.72,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.78,
+      "gpu_power": 21.27,
+      "chip_power": 23.35,
+      "fan_rpm": 5308
+    },
+    {
+      "t": 196.9,
+      "gpu_temp": 92.15,
+      "cpu_temp": 69.72,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.73,
+      "chip_power": 22.68,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 197.41,
+      "gpu_temp": 92.21,
+      "cpu_temp": 67.19,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.99,
+      "chip_power": 22.98,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 197.92,
+      "gpu_temp": 92.21,
+      "cpu_temp": 67.19,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.92,
+      "chip_power": 22.5,
+      "fan_rpm": 5328
+    },
+    {
+      "t": 198.43,
+      "gpu_temp": 92.19,
+      "cpu_temp": 69.4,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.07,
+      "chip_power": 22.43,
+      "fan_rpm": 5309
+    },
+    {
+      "t": 198.94,
+      "gpu_temp": 92.19,
+      "cpu_temp": 69.4,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.91,
+      "chip_power": 22.25,
+      "fan_rpm": 5349
+    },
+    {
+      "t": 199.46,
+      "gpu_temp": 92.21,
+      "cpu_temp": 68.2,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.33,
+      "chip_power": 22.65,
+      "fan_rpm": 5309
+    },
+    {
+      "t": 199.97,
+      "gpu_temp": 92.21,
+      "cpu_temp": 68.2,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.77,
+      "gpu_power": 20.97,
+      "chip_power": 22.31,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 200.48,
+      "gpu_temp": 92.19,
+      "cpu_temp": 69.39,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.77,
+      "gpu_power": 21.15,
+      "chip_power": 22.48,
+      "fan_rpm": 5309
+    },
+    {
+      "t": 200.99,
+      "gpu_temp": 92.19,
+      "cpu_temp": 69.39,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.91,
+      "gpu_power": 21.1,
+      "chip_power": 22.37,
+      "fan_rpm": 5388
+    },
+    {
+      "t": 201.5,
+      "gpu_temp": 92.08,
+      "cpu_temp": 69.28,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.87,
+      "gpu_power": 20.54,
+      "chip_power": 21.87,
+      "fan_rpm": 5387
+    },
+    {
+      "t": 202.01,
+      "gpu_temp": 92.08,
+      "cpu_temp": 69.28,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.07,
+      "chip_power": 22.39,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 202.53,
+      "gpu_temp": 92.08,
+      "cpu_temp": 69.3,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.19,
+      "chip_power": 22.5,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 203.03,
+      "gpu_temp": 92.08,
+      "cpu_temp": 69.3,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.8,
+      "gpu_power": 21.18,
+      "chip_power": 22.54,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 203.54,
+      "gpu_temp": 92.14,
+      "cpu_temp": 67.02,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.67,
+      "chip_power": 22.0,
+      "fan_rpm": 5345
+    },
+    {
+      "t": 204.04,
+      "gpu_temp": 92.14,
+      "cpu_temp": 67.02,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.13,
+      "chip_power": 22.44,
+      "fan_rpm": 5308
+    },
+    {
+      "t": 204.55,
+      "gpu_temp": 92.17,
+      "cpu_temp": 68.18,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.0,
+      "chip_power": 22.19,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 205.06,
+      "gpu_temp": 92.17,
+      "cpu_temp": 68.18,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.84,
+      "chip_power": 22.15,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 205.57,
+      "gpu_temp": 92.25,
+      "cpu_temp": 69.44,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.59,
+      "chip_power": 22.96,
+      "fan_rpm": 5386
+    },
+    {
+      "t": 206.07,
+      "gpu_temp": 92.25,
+      "cpu_temp": 69.44,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.84,
+      "chip_power": 22.15,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 206.59,
+      "gpu_temp": 92.14,
+      "cpu_temp": 66.96,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.7,
+      "gpu_power": 20.75,
+      "chip_power": 22.11,
+      "fan_rpm": 5309
+    },
+    {
+      "t": 207.1,
+      "gpu_temp": 92.14,
+      "cpu_temp": 66.96,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.93,
+      "chip_power": 22.24,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 207.61,
+      "gpu_temp": 92.09,
+      "cpu_temp": 69.32,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.77,
+      "gpu_power": 21.62,
+      "chip_power": 23.63,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 208.11,
+      "gpu_temp": 92.09,
+      "cpu_temp": 69.32,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.75,
+      "gpu_power": 20.84,
+      "chip_power": 22.73,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 208.62,
+      "gpu_temp": 92.21,
+      "cpu_temp": 69.5,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.92,
+      "gpu_power": 20.93,
+      "chip_power": 22.96,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 209.13,
+      "gpu_temp": 92.21,
+      "cpu_temp": 69.5,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.36,
+      "chip_power": 23.13,
+      "fan_rpm": 5325
+    },
+    {
+      "t": 209.64,
+      "gpu_temp": 92.3,
+      "cpu_temp": 69.08,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.05,
+      "chip_power": 22.39,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 210.15,
+      "gpu_temp": 92.3,
+      "cpu_temp": 69.08,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.64,
+      "gpu_power": 20.83,
+      "chip_power": 22.17,
+      "fan_rpm": 5344
+    },
+    {
+      "t": 210.67,
+      "gpu_temp": 92.14,
+      "cpu_temp": 70.37,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.22,
+      "chip_power": 22.58,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 211.17,
+      "gpu_temp": 92.14,
+      "cpu_temp": 70.37,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.88,
+      "gpu_power": 20.8,
+      "chip_power": 22.1,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 211.68,
+      "gpu_temp": 92.15,
+      "cpu_temp": 69.29,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.01,
+      "chip_power": 22.23,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 212.19,
+      "gpu_temp": 92.15,
+      "cpu_temp": 69.29,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.14,
+      "chip_power": 22.61,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 212.7,
+      "gpu_temp": 92.16,
+      "cpu_temp": 67.92,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.7,
+      "gpu_power": 20.96,
+      "chip_power": 22.37,
+      "fan_rpm": 5386
+    },
+    {
+      "t": 213.21,
+      "gpu_temp": 92.16,
+      "cpu_temp": 67.92,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.71,
+      "chip_power": 22.09,
+      "fan_rpm": 5327
+    },
+    {
+      "t": 213.72,
+      "gpu_temp": 92.35,
+      "cpu_temp": 69.26,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.99,
+      "chip_power": 22.37,
+      "fan_rpm": 5367
+    },
+    {
+      "t": 214.23,
+      "gpu_temp": 92.35,
+      "cpu_temp": 69.26,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.97,
+      "chip_power": 22.29,
+      "fan_rpm": 5326
+    },
+    {
+      "t": 214.73,
+      "gpu_temp": 92.19,
+      "cpu_temp": 69.27,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 21.07,
+      "chip_power": 22.45,
+      "fan_rpm": 5348
+    },
+    {
+      "t": 215.25,
+      "gpu_temp": 92.19,
+      "cpu_temp": 69.27,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.83,
+      "gpu_power": 21.03,
+      "chip_power": 22.37,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 215.75,
+      "gpu_temp": 92.15,
+      "cpu_temp": 45.13,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.55,
+      "chip_power": 21.69,
+      "fan_rpm": 5386
+    },
+    {
+      "t": 216.26,
+      "gpu_temp": 92.15,
+      "cpu_temp": 45.13,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.92,
+      "gpu_power": 21.05,
+      "chip_power": 22.38,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 216.78,
+      "gpu_temp": 92.09,
+      "cpu_temp": 67.52,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.75,
+      "chip_power": 22.07,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 217.27,
+      "gpu_temp": 92.09,
+      "cpu_temp": 67.52,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.16,
+      "chip_power": 22.47,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 217.81,
+      "gpu_temp": 92.17,
+      "cpu_temp": 69.55,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.71,
+      "gpu_power": 20.91,
+      "chip_power": 22.28,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 218.28,
+      "gpu_temp": 92.17,
+      "cpu_temp": 71.19,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.16,
+      "chip_power": 22.51,
+      "fan_rpm": 5366
+    },
+    {
+      "t": 218.81,
+      "gpu_temp": 92.19,
+      "cpu_temp": 71.1,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.93,
+      "chip_power": 22.23,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 219.32,
+      "gpu_temp": 92.17,
+      "cpu_temp": 71.05,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.08,
+      "chip_power": 22.39,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 219.83,
+      "gpu_temp": 92.17,
+      "cpu_temp": 71.05,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.78,
+      "gpu_power": 20.64,
+      "chip_power": 21.8,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 220.34,
+      "gpu_temp": 92.21,
+      "cpu_temp": 67.49,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.47,
+      "chip_power": 22.82,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 220.85,
+      "gpu_temp": 92.21,
+      "cpu_temp": 67.49,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.75,
+      "gpu_power": 20.83,
+      "chip_power": 22.12,
+      "fan_rpm": 5326
+    },
+    {
+      "t": 221.36,
+      "gpu_temp": 92.19,
+      "cpu_temp": 68.42,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.96,
+      "chip_power": 22.24,
+      "fan_rpm": 5387
+    },
+    {
+      "t": 221.87,
+      "gpu_temp": 92.19,
+      "cpu_temp": 68.42,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.92,
+      "chip_power": 22.22,
+      "fan_rpm": 5385
+    },
+    {
+      "t": 222.38,
+      "gpu_temp": 87.83,
+      "cpu_temp": 71.06,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.28,
+      "chip_power": 22.58,
+      "fan_rpm": 5346
+    },
+    {
+      "t": 222.89,
+      "gpu_temp": 87.83,
+      "cpu_temp": 71.06,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.77,
+      "gpu_power": 20.74,
+      "chip_power": 22.04,
+      "fan_rpm": 5345
+    },
+    {
+      "t": 223.39,
+      "gpu_temp": 92.11,
+      "cpu_temp": 70.65,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.96,
+      "gpu_power": 20.81,
+      "chip_power": 21.92,
+      "fan_rpm": 5345
+    },
+    {
+      "t": 223.9,
+      "gpu_temp": 92.11,
+      "cpu_temp": 70.65,
+      "gpu_mhz": 1577,
+      "gpu_busy": 99.8,
+      "gpu_power": 21.05,
+      "chip_power": 22.36,
+      "fan_rpm": 5385
+    },
+    {
+      "t": 224.41,
+      "gpu_temp": 92.08,
+      "cpu_temp": 66.97,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.79,
+      "chip_power": 22.05,
+      "fan_rpm": 5345
+    },
+    {
+      "t": 224.92,
+      "gpu_temp": 92.08,
+      "cpu_temp": 66.97,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.56,
+      "chip_power": 22.87,
+      "fan_rpm": 5326
+    },
+    {
+      "t": 225.43,
+      "gpu_temp": 92.17,
+      "cpu_temp": 68.27,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.54,
+      "chip_power": 21.78,
+      "fan_rpm": 5344
+    },
+    {
+      "t": 225.94,
+      "gpu_temp": 92.17,
+      "cpu_temp": 68.27,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.89,
+      "chip_power": 22.17,
+      "fan_rpm": 5385
+    },
+    {
+      "t": 226.44,
+      "gpu_temp": 92.1,
+      "cpu_temp": 69.32,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.27,
+      "chip_power": 22.56,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 226.95,
+      "gpu_temp": 92.1,
+      "cpu_temp": 69.32,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 21.18,
+      "chip_power": 22.44,
+      "fan_rpm": 5306
+    },
+    {
+      "t": 227.46,
+      "gpu_temp": 92.2,
+      "cpu_temp": 67.11,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 20.47,
+      "chip_power": 21.66,
+      "fan_rpm": 5366
+    },
+    {
+      "t": 227.97,
+      "gpu_temp": 92.2,
+      "cpu_temp": 67.11,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 19.77,
+      "chip_power": 21.32,
+      "fan_rpm": 5307
+    },
+    {
+      "t": 228.48,
+      "gpu_temp": 91.25,
+      "cpu_temp": 67.5,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 19.45,
+      "chip_power": 21.09,
+      "fan_rpm": 5307
+    },
+    {
+      "t": 228.99,
+      "gpu_temp": 91.25,
+      "cpu_temp": 67.5,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 17.94,
+      "chip_power": 19.55,
+      "fan_rpm": 5347
+    },
+    {
+      "t": 229.51,
+      "gpu_temp": 89.94,
+      "cpu_temp": 67.08,
+      "gpu_mhz": 1578,
+      "gpu_busy": 100.0,
+      "gpu_power": 18.39,
+      "chip_power": 19.59,
+      "fan_rpm": 5346
+    }
+  ],
+  "spread": {
+    "1": {
+      "ttft_p95_s": 10.203502897893674,
+      "per_user_tok_s": 0.4218684935815697,
+      "total_tok_s": 0.16978938230135396,
+      "trusted": true
+    },
+    "2": {
+      "ttft_p95_s": 16.806458512636894,
+      "per_user_tok_s": 0.41816398621238565,
+      "total_tok_s": 2.1201256444617615,
+      "trusted": true
+    },
+    "4": {
+      "ttft_p95_s": 4.503596741071114,
+      "per_user_tok_s": 0.8911576963794869,
+      "total_tok_s": 14.94239395361998,
+      "trusted": false
+    },
+    "8": {
+      "ttft_p95_s": 1.0391332729775529,
+      "per_user_tok_s": 0.8425979695459683,
+      "total_tok_s": 0.15537291704786374,
+      "trusted": true
+    },
+    "16": {
+      "ttft_p95_s": 1.01723374615015,
+      "per_user_tok_s": 1.0035508311634418,
+      "total_tok_s": 1.1293101551069586,
+      "trusted": true
+    }
+  },
+  "files": {
+    "csv": "sweep_qwen2.5-1.5b_llama-np4-c4096_20261031-042759.csv",
+    "png": "sweep_qwen2.5-1.5b_llama-np4-c4096_20261031-042759.png",
+    "heat_png": "sweep_qwen2.5-1.5b_llama-np4-c4096_20261031-042759_heat.png"
+  }
+}

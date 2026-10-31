@@ -308,13 +308,8 @@ struct LoadTestView: View {
     }
 
     private func open(_ url: URL) {
-        guard let text = try? String(contentsOf: url, encoding: .utf8) else { return }
-        let lines = text.split(whereSeparator: \.isNewline)
-        guard let header = lines.first?.split(separator: ",").map(String.init) else { return }
-        rows = lines.dropFirst().map { line in
-            let vals = line.split(separator: ",").map { Double($0) ?? 0 }
-            return SweepRequest(Dictionary(uniqueKeysWithValues: zip(header, vals)))
-        }
+        rows = RunFiles.readCSV(url)
+        guard !rows.isEmpty else { return }
         gpuByLevel = [:]
         heatByLevel = [:]
         heatSeries = []

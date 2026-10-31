@@ -11,6 +11,7 @@
     python -m bench sweep quality          # 1, 2, 4, 8, 16 users at once (runs the check first)
     python -m bench sweep quality --repeat 2   # twice, and report how much the runs differ
     python -m bench sweep quality --backend llama   # measure llama-server (start it yourself first)
+    python -m bench slots quality --np 1,2,4,8,16    # start llama-server with each slot count and sweep it
 
 `fast` = qwen2.5:0.5b and `quality` = qwen2.5:1.5b; any Ollama model name also works.
 """
@@ -61,6 +62,18 @@ def main():
     s.add_argument("--url", default="http://localhost:8080", help="llama-server address (with --backend llama)")
     s.add_argument("--json", action="store_true", help="machine-readable output (used by the GUI app)")
 
+    s = sub.add_parser("slots", help="sweep several llama-server slot counts, one after another")
+    s.add_argument("model", nargs="?", default="quality")
+    s.add_argument("--np", default="1,2,4,8,16", help="slot counts to test")
+    s.add_argument("--users", default="1,2,4,8,16", help="concurrency levels in each sweep")
+    s.add_argument("--requests", type=int, default=3, help="requests per user at each level")
+    s.add_argument("--max-tokens", type=int, default=400)
+    s.add_argument("--repeat", type=int, default=2)
+
+    s = sub.add_parser("overhead", help="where llama-server loses speed vs the bare engine")
+    s.add_argument("model", nargs="?", default="quality")
+    s.add_argument("--np", type=int, default=8, help="slots = requests decoded together")
+
     s = sub.add_parser("check", help="is the machine quiet enough to benchmark?")
     s.add_argument("--seconds", type=float, default=5)
     s.add_argument("--json", action="store_true", help="machine-readable output (used by the GUI app)")
@@ -94,6 +107,13 @@ def main():
         from . import sweep
         sweep.main(a.model, [int(u) for u in a.users.split(",")], a.requests, a.max_tokens, as_json=a.json,
                    repeat=a.repeat, force=a.force, warmup=not a.no_warmup)
+    elif a.cmd == "slots":
+        from . import slots
+        slots.main(a.model, [int(n) for n in a.np.split(",")], [int(u) for u in a.users.split(",")],
+                   a.requests, a.max_tokens, a.repeat)
+    elif a.cmd == "overhead":
+        from . import overhead
+        overhead.main(a.model, a.np)
     elif a.cmd == "check":
         import json
         from . import env

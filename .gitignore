@@ -14,3 +14,9 @@ app/build/
 
 # Local secrets, if you ever add any
 .env
+
+# llama-server logs from bench slots
+research/bench/logs/
+
+# downloaded model weights
+models/
